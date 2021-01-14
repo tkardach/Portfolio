@@ -2,6 +2,7 @@ import './OverviewPage.css';
 import React from 'react';
 import Skill from '../../components/skill/Skill';
 
+
 const OverviewPage = () => {
   return (
     <div id="overview">
@@ -14,23 +15,23 @@ const OverviewPage = () => {
         <div id="skills-section">
           <Skill
             name="C#"
-            iconUrl="CSharpLogo.png"
+            iconUrl="CSharpLogo_100.png"
             percentage={90}
             color={'#813284'}/>
           <Skill
             name="NodeJS/JavaScript"
-            iconUrl="NodeJSLogo.png"
-            percentage={75}
+            iconUrl="NodeJSLogo_100.png"
+            percentage={70}
             color={'#539E43'}/>
           <Skill
             name="C++"
-            iconUrl="CPPLogo.png"
-            percentage={70}
+            iconUrl="CPPLogo_100.png"
+            percentage={65}
             color={'#1B598E'}/>
           <Skill
             name="Python"
-            iconUrl="PythonLogo.png"
-            percentage={60}
+            iconUrl="PythonLogo_100.png"
+            percentage={50}
             color={'#FBD140'}/>
         </div>
     </div>

@@ -2,9 +2,9 @@ import './Sidebar.css';
 import React from 'react';
 import Profile from '../profile/Profile';
 
-const Sidebar = ({profile, children}) => {
+const Sidebar = ({profile, hide, children}) => {
   return (
-      <div className="sidebar">
+      <div className={hide ? "sidebar hide" : "sidebar"}>
         <div className="sidebar-profile">
           <Profile 
             name={profile.name}></Profile>

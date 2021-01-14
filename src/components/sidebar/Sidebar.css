@@ -1,14 +1,15 @@
 .sidebar-item {
-    width: 100%;
-    padding: 8px 8px 8px 8px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s;
-    border: none;
-    cursor: pointer;
-    border-radius: 0;
+  width: 100%;
+  min-width: 300px;
+  padding: 8px 8px 8px 8px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #818181;
+  display: block;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
+  border-radius: 0;
 }
 
 .sidebar-item:focus {
@@ -16,7 +17,12 @@
 }
 
 .sidebar-profile {
-    margin-bottom: 15px;
-    width: 80%;
-    margin: auto;
+  min-width: 256px;
+  margin-bottom: 15px;
+  width: 80%;
+  margin: auto;
+}
+
+.hide {
+  width: 0;
 }
