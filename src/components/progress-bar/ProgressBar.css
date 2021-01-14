@@ -1,3 +1,35 @@
+.progress-container {
+    height: 10px;
+    line-height: 10px;
+    vertical-align: middle;
+    text-align: left;
+    background-color: rgb(121, 121, 121);
+    border-radius: 50px;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    border-radius: inherit;
+}
+
+.progress-filler {
+    height: 10px;
+    border-radius: 50px;
+    transition: width 0.2s;
+}
+
+.progress-label {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    margin-top: -12px;
+    line-height: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
 .float-left {
     float: left;
 }

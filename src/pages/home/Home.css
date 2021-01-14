@@ -2,7 +2,7 @@
 .main {
   transition: margin-left .5s;
   background-color: #282c34;
-  position: fixed;
+  position: absolute;
   z-index: 0;
   top: 0;
   left: 0;
@@ -25,13 +25,7 @@
 
 @media(min-width: 850px) {
   .main {
-    background-color: #282c34;
-    position: fixed;
-    z-index: 0;
-    top: 0;
     left: 400px;
-    bottom: 0;
-    right: 0;
   }
 
   .sidebar {
