@@ -14,27 +14,8 @@ code {
 
 
 /* 
-  I am using the global stylesheet for color themes and structuring, while keeping the component level stylesheets independent 
-in sizing and appearance.
+  I am using the global stylesheet for color themes. The general structure and formatting is done on a component level
 */
-
-.main {
-  transition: margin-left .5s;
-  background-color: #282c34;
-}
-
-.sidebar {
-  width: 100%;
-  background-color: white;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  transition: 0.5s;
-  overflow: hidden;
-  overflow-y: auto;
-}
 
 .sidebar-item {
   background-color: white;
@@ -55,20 +36,4 @@ in sizing and appearance.
 
 .icon {
   color: #282c34;
-}
-
-@media(min-width: 850px) {
-  .main {
-    background-color: #282c34;
-    position: fixed;
-    z-index: 0;
-    top: 0;
-    left: 400px;
-    bottom: 0;
-    right: 0;
-  }
-
-  .sidebar {
-    width: 400px;
-  }
 }

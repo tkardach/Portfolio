@@ -6,7 +6,8 @@ const Sidebar = ({profile, children}) => {
   return (
       <div className="sidebar">
         <div className="sidebar-profile">
-          <Profile></Profile>
+          <Profile 
+            name={profile.name}></Profile>
         </div>
         <div className="sidebar-menu">
           <React.Fragment>{children}</React.Fragment>

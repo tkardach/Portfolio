@@ -1,0 +1,14 @@
+.skill-container {
+    width: 100%;
+}
+
+.skill-icon {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.skill-progress {
+    vertical-align: middle;
+    display: inline-block;
+    width: 60%;
+}
