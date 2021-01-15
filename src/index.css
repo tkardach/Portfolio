@@ -24,21 +24,19 @@ code {
 }
 
 .animateTransitionUp {
-  animation: pageTransitionUp 0.5s;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 0px;
+  overflow: hidden;
+  animation: pageTransitionUp 1s forwards;
 }
 
 @keyframes pageTransitionUp {
-  from { transform: translate(0, 100%); }
-  to { transform: translate(0, 0); }
-}
-
-.animateLeaveUp {
-  animation: pageLeaveUp 0.5s;
-}
-
-@keyframes pageLeaveUp {
-  from { transform: translate(0, 0); }
-  to { transform: translate(0, -100%); }
+  0% { height: 0px; }
+  50% { height: 100%; }
+  100% {height: 100%; overflow-y: auto;}
 }
 
 .animateTransitionDown {
@@ -46,17 +44,8 @@ code {
 }
 
 @keyframes pageTransitionDown {
-  from { transform: translate(0, -100%); }
+  from { transform: translate(0, -100vh); }
   to { transform: translate(0, 0); }
-}
-
-.animateLeaveDown {
-  animation: pageLeaveDown 0.5s;
-}
-
-@keyframes pageLeaveDown {
-  from { transform: translate(0, 0); }
-  to { transform: translate(0, 100%); }
 }
 
 /* 
@@ -81,10 +70,17 @@ code {
   color: #282c34;
 }
 
-.icon {
+.icon-button {
   color: #282c34;
+  transition: 0.3s;
+}
+.icon-button:hover {
+  color: gray;
 }
 
 .vertical {
   border-color: #282c34;
+}
+
+#overview {
 }

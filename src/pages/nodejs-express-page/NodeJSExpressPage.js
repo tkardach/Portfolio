@@ -5,7 +5,7 @@ import Experience from '../../components/experience/Experience';
 
 const NodeJSExpressPage = () => {
   return (
-    <div className="nodejs-page">
+    <div class="page-window">
       <h1 className="title">Work Experience</h1>
       <div className="work-experience">
         <Experience 

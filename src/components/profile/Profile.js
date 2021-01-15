@@ -11,9 +11,9 @@ const Profile = ({name}) => {
         <div className="profile-info">
             <h1>{name}</h1>
             <div className="social">
-                <FontAwesomeIcon className="icon" icon={faLinkedin} size="2x"/>
-                <FontAwesomeIcon className="icon" icon={faGithubSquare} size="2x"/>
-                <FontAwesomeIcon className="icon" icon={faEnvelopeSquare} size="2x"/>
+                <FontAwesomeIcon className="icon-button" icon={faLinkedin}/>
+                <FontAwesomeIcon className="icon-button" icon={faGithubSquare}/>
+                <FontAwesomeIcon className="icon-button" icon={faEnvelopeSquare}/>
             </div>
         </div>
     </div>

@@ -17,7 +17,12 @@
     background-image: url('https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg');
 }
 
-.icon {
+.social {
+    height: 50px;
+}
+
+.icon-button {
     cursor: pointer;
     margin: 5px;
+    font-size: 2em;
 }
