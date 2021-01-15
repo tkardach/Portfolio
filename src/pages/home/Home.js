@@ -50,10 +50,6 @@ const Home = () => {
     // 850px matches the media query in Home.css
     const isMobile = useMediaQuery({ query: `(max-width: 850px)`});
     const currentPage = pageState;
-    
-    const styleOverwrite = {
-        zIndex: 1
-    }
 
     return (
         <div>

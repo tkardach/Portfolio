@@ -1,6 +1,7 @@
 import './Experience.css';
 import React from 'react';
 
+
 const Experience = ({iconUrl, title, company, fromYear, toYear, children}) => {
     const newFromYear = fromYear ? fromYear : '2009';
     const newToYear = toYear ? toYear : 'Present';
@@ -14,7 +15,6 @@ const Experience = ({iconUrl, title, company, fromYear, toYear, children}) => {
                 <div className="experience-title-container">
                     <div className="experience-icon icon">
                         <img 
-                            style={{width: 64, height: 64}}
                             src={newIconUrl} 
                             alt={title}/>
                     </div>

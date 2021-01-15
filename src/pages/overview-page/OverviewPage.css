@@ -5,6 +5,7 @@
 }
 
 #overview-title {
+    font-size: 30px;
 }
 
 #statement {
@@ -18,7 +19,7 @@
 #skill-title {
     color: white;
     padding: 20px;
-    font-size: 40px;
+    font-size: 25px;
     text-shadow: 2px 4px rgba(0, 0, 0, 0.2);
 }
 
@@ -26,5 +27,5 @@
     display: inline-block;
     width: 100%;
     height: auto;
-    margin: 25px 0;
 }
+
