@@ -22,7 +22,9 @@ const Home = () => {
     const previousPageState = usePrevious(pageState);
 
     const renderPage = (state) => {
-        const transition = state < previousPageState ? "animateTransitionDown" : "animateTransitionUp";
+        let transition = '';
+        if (!isMobile)
+            transition = state < previousPageState ? "animateTransitionDown" : "animateTransitionUp";
         
         return (
             state === PageState.overview ? <div key={state} className={transition}><OverviewPage/></div> :
