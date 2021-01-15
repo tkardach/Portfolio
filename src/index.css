@@ -19,9 +19,50 @@ code {
   text-shadow: 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.work-experience {
+  margin: 15px 10%;
+}
+
+.animateTransitionUp {
+  animation: pageTransitionUp 0.5s;
+}
+
+@keyframes pageTransitionUp {
+  from { transform: translate(0, 100%); }
+  to { transform: translate(0, 0); }
+}
+
+.animateLeaveUp {
+  animation: pageLeaveUp 0.5s;
+}
+
+@keyframes pageLeaveUp {
+  from { transform: translate(0, 0); }
+  to { transform: translate(0, -100%); }
+}
+
+.animateTransitionDown {
+  animation: pageTransitionDown 0.5s;
+}
+
+@keyframes pageTransitionDown {
+  from { transform: translate(0, -100%); }
+  to { transform: translate(0, 0); }
+}
+
+.animateLeaveDown {
+  animation: pageLeaveDown 0.5s;
+}
+
+@keyframes pageLeaveDown {
+  from { transform: translate(0, 0); }
+  to { transform: translate(0, 100%); }
+}
+
 /* 
   I am using the global stylesheet for color themes. The general structure and formatting is done on a component level
 */
+
 
 .sidebar-item {
   background-color: white;

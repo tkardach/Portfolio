@@ -5,9 +5,9 @@ import Experience from '../../components/experience/Experience';
 
 const CPPCSDotNetPage = () => {
   return (
-    <div className="cpp-container">
+    <div>
       <h1 className="title">Work Experience</h1>
-      <div className="cpp-experience">
+      <div className="work-experience">
         <Experience 
           iconUrl="ThermoFisherLogo_64.png"
           title="Software Engineer II"

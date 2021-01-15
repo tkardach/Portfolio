@@ -10,22 +10,28 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngular, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
 import { useMediaQuery } from 'react-responsive';
+import { usePrevious } from '../../shared/shared';
 
 
 const PageState = Object.freeze({"overview": 0, "cpp_cs_dotnet": 1, "nodejs_express": 2, "angularjs": 3, "react": 4});
-
-const renderPage = (state) => (
-    state === PageState.overview ? <OverviewPage/> :
-    state === PageState.cpp_cs_dotnet ? <CPPCSDotNetPage/> :
-    state === PageState.nodejs_express ? <NodeJSExpressPage/> :
-    state === PageState.angularjs ? <AngularPage/> : 
-    state === PageState.react ? <ReactPage/> : <div/>
-);
 
 const Home = () => {
     const [pageState, setPageState] = useState(PageState.overview);
     const [hideSidebar, setHideSidebar] = useState(false);
 
+    const previousPageState = usePrevious(pageState);
+
+    const renderPage = (state) => {
+        const transition = state < previousPageState ? "animateTransitionDown" : "animateTransitionUp";
+        
+        return (
+            state === PageState.overview ? <div key={state} className={transition}><OverviewPage/></div> :
+            state === PageState.cpp_cs_dotnet ? <div key={state} className={transition}><CPPCSDotNetPage/></div>:
+            state === PageState.nodejs_express ? <div key={state} className={transition}><NodeJSExpressPage/></div> :
+            state === PageState.angularjs ? <div key={state} className={transition}><AngularPage/></div> : 
+            state === PageState.react ? <div key={state} className={transition}><ReactPage/></div>: <div/>
+        );
+    };
 
     const changeState = (state) => {
         if (!isNaN(state)) {

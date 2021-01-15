@@ -24,7 +24,7 @@ const Experience = ({iconUrl, title, company, fromYear, toYear, children}) => {
                     </div>
                 </div>
                 <div className="experience-duration">
-                    <div class="vertical"/>
+                    <div className="vertical"/>
                     <p className="experience-years">{newFromYear} - {newToYear}</p>
                 </div>
             </div>

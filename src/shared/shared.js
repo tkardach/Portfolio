@@ -1,2 +1,9 @@
+import { useRef, useEffect } from 'react';
 
-export const mobileWidth = 850;
+export function usePrevious(value) {
+  const ref = useRef();
+  useEffect(() => {
+    ref.current = value;
+  });
+  return ref.current;
+}
