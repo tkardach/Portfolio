@@ -1,0 +1,76 @@
+.experience-container {
+    background: white;
+    max-width: 1000px;
+    border-radius: 4px;
+    margin: 20px auto;
+}
+
+.experience-info {
+    position: relative;
+    left: 0;
+    top: 0;
+    right: 0;
+    text-align: left;
+}
+
+.experience-title-container {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 180px;
+}
+
+.experience-icon {
+    display: inline-block;
+    padding: 5px;
+}
+
+.experience-description {
+    position: absolute;
+    left: 90px;
+    top: 8px;
+    right: 0;
+}
+
+.experience-title {
+    font-size: 26px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.experience-company {
+    font-size: 20px;
+    margin: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.experience-duration {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 180px;
+    margin: 8px 0;
+}
+
+.vertical {
+    float: left;
+    border-left: 2px solid;
+    height: 64px;
+}
+
+.experience-years {
+    float: right;
+    line-height: 64px;
+    font-size: 20px;
+    margin: 0 25px;
+}
+
+.experience-summary {
+    display: inline-block;
+    text-align: left;
+    margin: 90px 15px 15px 15px;
+}

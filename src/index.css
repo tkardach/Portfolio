@@ -12,6 +12,12 @@ code {
     monospace;
 }
 
+.title {
+  color: white;
+  font-size: 50px;
+  padding: 30px;
+  text-shadow: 2px 4px rgba(0, 0, 0, 0.2);
+}
 
 /* 
   I am using the global stylesheet for color themes. The general structure and formatting is done on a component level
@@ -36,4 +42,8 @@ code {
 
 .icon {
   color: #282c34;
+}
+
+.vertical {
+  border-color: #282c34;
 }
