@@ -4,15 +4,17 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
 
-const Kebab = ({count, vertical, size, color, selColor, kebabClick}) => {
-    const [kebabIndex, setKebabIndex] = useState(0);
-
+const Kebab = ({count, selIndex, vertical, size, color, selColor, kebabClick}) => {
     const newSize = size ? size : '16px';
     const newCount = count ? count : 3;
     const newVertical = vertical ? true : false;
-    const newColor = color ? color : 'white';
-    const newSelColor = selColor ? selColor : 'gray';
+    const newColor = color ? color : 'gray';
+    const newSelColor = selColor ? selColor : 'white';
     const newKebabClick = kebabClick ? kebabClick : (index) => {};
+    const newSelIndex = selIndex ? selIndex : 0;
+
+    const [kebabIndex, setKebabIndex] = useState(0);
+    
 
     const dots = [];
 

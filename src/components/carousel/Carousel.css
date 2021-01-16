@@ -1,0 +1,29 @@
+.carousel-kebab-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 20px;
+  z-index: 2;
+}
+
+.carousel-up-arrow {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.carousel-down-arrow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-chevron {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  z-index: 1;
+  width: 100%;
+  cursor: pointer;
+}

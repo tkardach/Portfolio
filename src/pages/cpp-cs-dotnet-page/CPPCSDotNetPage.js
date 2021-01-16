@@ -30,7 +30,17 @@ const CPPCSDotNetPage = () => {
         </div>
       </div>
       <div>
-        <p>Other Page!</p>
+        <h1 className="title">Projects</h1>
+        <div className="work-experience">
+          <Experience 
+            iconUrl="ThermoFisherLogo_64.png"
+            title="Software Engineer II"
+            company="ThermoFisher Scientific"
+            fromYear="2018"
+            toYear="Present">
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+          </Experience>
+        </div>
       </div>
     </Carousel>
   );

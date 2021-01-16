@@ -23,6 +23,21 @@ code {
   margin: 15px 10%;
 }
 
+.leave-transition {
+  z-index: -1;
+  transition: cardUnder 0.5s forwards;
+}
+
+@keyframes cardUnder {
+  0% {  }
+  100% { 
+    display: none;
+    overflow: hidden;
+    visibility: hidden;
+    height: 0
+  }
+}
+
 .animateTransitionUp {
   position: absolute;
   left: 0;
@@ -82,5 +97,12 @@ code {
   border-color: #282c34;
 }
 
-#overview {
+.carousel-chevron {
+  color: white;
+}
+.carousel-chevron:hover {
+  background-color: #33353a;
+}
+.carousel-chevron:focus {
+  background-color: #545558;
 }

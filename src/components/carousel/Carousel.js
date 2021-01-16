@@ -1,8 +1,9 @@
 import './Carousel.css';
 import React, { Children, useState } from 'react';
 import { usePrevious } from '../../shared/shared';
-
 import Kebab from '../kebab/Kebab';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
 
 
 const Carousel = ({vertical, children}) => {
@@ -17,28 +18,59 @@ const Carousel = ({vertical, children}) => {
     const currentPageIndex = pageIndex;
 
     const kebabClick = (index) => {
-        console.log(index);
         setPageIndex(index);
     }
 
-    const renderPage = (state) => {
-        const transition = state < previousPageIndex ? "animateTransitionDown" : "animateTransitionUp";
+    const renderUpArrow = (currentIndex) => {
+        return (
+            currentIndex > 0 ?
+            <button 
+                className="carousel-up-arrow carousel-chevron"
+                onClick={() => setPageIndex(currentIndex-1)}>
+                <FontAwesomeIcon icon={faChevronUp}/>
+            </button> : <div/>
+        )
+    }
+
+    const renderDownArrow = (currentIndex) => {
+        return (
+            currentIndex < pageCount - 1 ?
+                <button 
+                    className={"carousel-down-arrow carousel-chevron"}
+                    onClick={() => setPageIndex(currentIndex+1)}>
+                    <FontAwesomeIcon icon={faChevronDown}/>
+                </button> : <div/>
+        )
+    }
+
+    const renderPage = (currentIndex) => {
+        const transition = currentIndex < previousPageIndex ? "animateTransitionDown" : "animateTransitionUp";
         
         return newChildren.map(
             (child, index) => (
-                index === state ?
-                    <div key={state} className={transition}>{child}</div> : <div key={state}/>
+                index === currentIndex ?
+                    <div
+                        key={index} 
+                        className={transition}>{child}
+                    </div> : <div key={index}/>
             )
         );
     }
 
     return (
         <div>
-            <div>
+            <div className="carousel-kebab-container">
                 <Kebab 
                     count={pageCount}
                     vertical={newVertical}
-                    kebabClick={kebabClick} />
+                    kebabClick={kebabClick}
+                    selIndex={currentPageIndex} />
+            </div>
+            <div>
+                {renderUpArrow(currentPageIndex)}
+            </div>
+            <div>
+                {renderDownArrow(currentPageIndex)}
             </div>
             <div>
                 {renderPage(currentPageIndex)}
