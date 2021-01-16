@@ -7,7 +7,10 @@ const Sidebar = ({profile, hide, children}) => {
       <div className={hide ? "sidebar hide" : "sidebar"}>
         <div className="sidebar-profile">
           <Profile 
-            name={profile.name}></Profile>
+            name={profile.name}
+            gitUrl={profile.github}
+            linkedInUrl={profile.linkedin}
+            email={profile.email}></Profile>
         </div>
         <div className="sidebar-menu">
           <React.Fragment>{children}</React.Fragment>

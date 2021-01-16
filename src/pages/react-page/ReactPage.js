@@ -3,7 +3,7 @@ import React from 'react';
 
 const ReactPage = () => {
   return (
-    <div class="page-window">
+    <div>
         <p>React state works</p>
     </div>
   );

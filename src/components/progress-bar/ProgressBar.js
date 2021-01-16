@@ -6,11 +6,11 @@ const ProgressBar = ({percentage, name, color, lblcolor}) => {
     const fillerStyle = {
         width: percentage ? `${percentage}%` : '100%',
         backgroundColor: color ? color : 'blue',
-      }
-    
-      const labelStyle = {
+    }
+
+    const labelStyle = {
         color: lblcolor ? lblcolor : 'white',
-      }
+    }
 
     return (
         <div className="progress-container">

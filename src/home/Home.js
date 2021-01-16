@@ -1,16 +1,16 @@
 import './Home.css';
-import React, { useState, useEffect } from 'react';
-import OverviewPage from '../overview-page/OverviewPage';
-import CPPCSDotNetPage from '../cpp-cs-dotnet-page/CPPCSDotNetPage';
-import NodeJSExpressPage from '../nodejs-express-page/NodeJSExpressPage';
-import AngularPage from '../angular-page/AngularPage';
-import ReactPage from '../react-page/ReactPage';
-import Sidebar from '../../components/sidebar/Sidebar';
+import React, { useState } from 'react';
+import OverviewPage from '../pages/overview-page/OverviewPage';
+import CPPCSDotNetPage from '../pages/cpp-cs-dotnet-page/CPPCSDotNetPage';
+import NodeJSExpressPage from '../pages/nodejs-express-page/NodeJSExpressPage';
+import AngularPage from '../pages/angular-page/AngularPage';
+import ReactPage from '../pages/react-page/ReactPage';
+import Sidebar from '../components/sidebar/Sidebar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { faAngular, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
 import { useMediaQuery } from 'react-responsive';
-import { usePrevious } from '../../shared/shared';
+import { usePrevious } from '../shared/shared';
 
 
 const PageState = Object.freeze({"overview": 0, "cpp_cs_dotnet": 1, "nodejs_express": 2, "angularjs": 3, "react": 4});
@@ -21,6 +21,10 @@ const Home = () => {
 
     const previousPageState = usePrevious(pageState);
 
+    /**
+     * Handle rendering new page according to page state
+     * @param {PageState} state state of the Home component
+     */
     const renderPage = (state) => {
         let transition = '';
         if (!isMobile)
@@ -35,24 +39,31 @@ const Home = () => {
         );
     };
 
+    /**
+     * Change the state of the Home component
+     * @param {PageState} state new state for the Home component 
+     */
     const changeState = (state) => {
         if (!isNaN(state)) {
             setPageState(state);
 
+            // For mobile, we hide the sidebar when opening a page
             if (isMobile)
                 setHideSidebar(true);
         }
     }
 
+    /** Show the sidebar */
     const showSidebar = () => {
         setHideSidebar(false);
     }
     
+    // Profile information
     const profile = {
-        name: "Bubba Sparks",
-        linkedin: "#",
-        github: "#",
-        email: "#"
+        name: process.env.REACT_APP_PROFILE_NAME,
+        linkedin: process.env.REACT_APP_LINKEDIN_URL,
+        github: process.env.REACT_APP_GIT_URL,
+        email: process.env.REACT_APP_EMAIL_ADDRESS
     }
 
     // 850px matches the media query in Home.css

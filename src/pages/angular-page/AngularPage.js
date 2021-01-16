@@ -5,7 +5,7 @@ import Experience from '../../components/experience/Experience';
 
 const AngularPage = () => {
   return (
-    <div class="page-window">
+    <div>
       <h1 className="title">Work Experience</h1>
       <div className="work-experience">
         <Experience 
