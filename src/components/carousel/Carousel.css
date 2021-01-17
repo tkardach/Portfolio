@@ -1,4 +1,9 @@
-.carousel-kebab-container {
+.carousel-content {
+  height: 100%;
+  overflow-y: auto!important;
+}
+
+.carousel-kebab-container-vertical {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -6,24 +11,51 @@
   z-index: 2;
 }
 
+.carousel-kebab-container-horizontal {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 20px;
+  z-index: 2;
+}
+
 .carousel-up-arrow {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin-top: 20px;
 }
 
 .carousel-down-arrow {
   position: absolute;
   bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.carousel-left-arrow {
+  position: absolute;
+  top: 50%;
   left: 0;
+  transform: translate(-50%, -50%);
+  margin-left: 20px;
+}
+
+.carousel-right-arrow {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translate(-50%, -50%);
 }
 
 .carousel-chevron {
   background-color: transparent;
   outline: none;
   border: none;
-  font-size: 20px;
+  font-size: 24px;
   z-index: 1;
-  width: 100%;
   cursor: pointer;
+  filter:drop-shadow(0px 0px 1px rgb(53, 53, 53));
 }

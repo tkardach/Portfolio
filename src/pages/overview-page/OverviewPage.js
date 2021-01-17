@@ -3,9 +3,9 @@ import React from 'react';
 import Skill from '../../components/skill/Skill';
 
 
-const OverviewPage = () => {
+const OverviewPage = ({className}) => {
   return (
-    <div id="overview">
+    <div id="overview" className={className}>
         <h1 id="overview-title" className="title">Back End/Full Stack Software Engineer</h1>
         <div id="statement">
           <p>

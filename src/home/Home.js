@@ -15,7 +15,7 @@ import { usePrevious } from '../shared/shared';
 
 const PageState = Object.freeze({"overview": 0, "cpp_cs_dotnet": 1, "nodejs_express": 2, "angularjs": 3, "react": 4});
 
-const Home = () => {
+const Home = ({className}) => {
     const [pageState, setPageState] = useState(PageState.overview);
     const [hideSidebar, setHideSidebar] = useState(false);
 
@@ -31,11 +31,11 @@ const Home = () => {
             transition = state < previousPageState ? "animateTransitionDown" : "animateTransitionUp";
         
         return (
-            state === PageState.overview ? <div key={state} className={transition}><OverviewPage/></div> :
-            state === PageState.cpp_cs_dotnet ? <div key={state} className={transition}><CPPCSDotNetPage/></div>:
-            state === PageState.nodejs_express ? <div key={state} className={transition}><NodeJSExpressPage/></div> :
-            state === PageState.angularjs ? <div key={state} className={transition}><AngularPage/></div> : 
-            state === PageState.react ? <div key={state} className={transition}><ReactPage/></div>: <div/>
+            state === PageState.overview ? <OverviewPage key={state} className={transition}/>:
+            state === PageState.cpp_cs_dotnet ? <CPPCSDotNetPage key={state} className={transition}/>:
+            state === PageState.nodejs_express ? <NodeJSExpressPage key={state} className={transition}/> :
+            state === PageState.angularjs ? <AngularPage key={state} className={transition}/> : 
+            state === PageState.react ? <ReactPage key={state} className={transition}/>: <div/>
         );
     };
 
@@ -71,7 +71,7 @@ const Home = () => {
     const currentPage = pageState;
 
     return (
-        <div>
+        <div className={className}>
             {(isMobile && hideSidebar) &&
                 <div className="back-button" onClick={showSidebar}>
                     <FontAwesomeIcon icon={faChevronLeft} size="3x"/>
@@ -94,7 +94,7 @@ const Home = () => {
                     className="sidebar-item"
                     onClick={() => changeState(PageState.react)}><FontAwesomeIcon icon={faReact}/> React</button>
             </Sidebar>
-            <div className='main'> 
+            <div className="main"> 
                 {renderPage(currentPage)}
             </div>
         </div>

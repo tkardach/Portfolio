@@ -3,15 +3,16 @@ import React, { Children, useState } from 'react';
 import { usePrevious } from '../../shared/shared';
 import Kebab from '../kebab/Kebab';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faChevronDown, faChevronUp } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown, faChevronUp, faChevronLeft, faChevronRight } from '@fortawesome/free-solid-svg-icons'
 
 
-const Carousel = ({vertical, children}) => {
+const Carousel = ({className, vertical, children}) => {
     const [pageIndex, setPageIndex] = useState(0);
 
     const pageCount = Children.count(children);
     const newVertical = vertical ? true : false;
     const newChildren = children ? children : [];
+    const newKebabClass = newVertical ? "carousel-kebab-container-vertical" : "carousel-kebab-container-horizontal"
     
     const previousPageIndex = usePrevious(pageIndex);
 
@@ -21,30 +22,40 @@ const Carousel = ({vertical, children}) => {
         setPageIndex(index);
     }
 
-    const renderUpArrow = (currentIndex) => {
+    const renderBackArrow = (currentIndex) => {
+        const carouselClass = newVertical ? "carousel-up-arrow" : "carousel-left-arrow";
+        const chevron = newVertical ? faChevronUp : faChevronLeft;
+
         return (
             currentIndex > 0 ?
             <button 
-                className="carousel-up-arrow carousel-chevron"
+                className={`${carouselClass} carousel-chevron`}
                 onClick={() => setPageIndex(currentIndex-1)}>
-                <FontAwesomeIcon icon={faChevronUp}/>
+                <FontAwesomeIcon icon={chevron}/>
             </button> : <div/>
         )
     }
 
-    const renderDownArrow = (currentIndex) => {
+    const renderForwardArrow = (currentIndex) => {
+        const carouselClass = newVertical ? "carousel-down-arrow" : "carousel-right-arrow";
+        const chevron = newVertical ? faChevronDown : faChevronRight;
+
         return (
             currentIndex < pageCount - 1 ?
                 <button 
-                    className={"carousel-down-arrow carousel-chevron"}
+                    className={`${carouselClass} carousel-chevron`}
                     onClick={() => setPageIndex(currentIndex+1)}>
-                    <FontAwesomeIcon icon={faChevronDown}/>
+                    <FontAwesomeIcon icon={chevron}/>
                 </button> : <div/>
         )
     }
 
     const renderPage = (currentIndex) => {
-        const transition = currentIndex < previousPageIndex ? "animateTransitionDown" : "animateTransitionUp";
+        const transition = 
+            previousPageIndex !== undefined ?
+            (newVertical ? 
+                currentIndex < previousPageIndex ? "animateTransitionDown" : "animateTransitionUp" :
+                currentIndex < previousPageIndex ? "animateTransitionLeft" : "animateTransitionRight") : "";
         
         return newChildren.map(
             (child, index) => (
@@ -58,22 +69,17 @@ const Carousel = ({vertical, children}) => {
     }
 
     return (
-        <div>
-            <div className="carousel-kebab-container">
+        <div className={className}>
+            {renderBackArrow(currentPageIndex)}
+            {renderForwardArrow(currentPageIndex)}
+            <div className="carousel-content">
+                {renderPage(currentPageIndex)}
                 <Kebab 
+                    className={newKebabClass}
                     count={pageCount}
                     vertical={newVertical}
                     kebabClick={kebabClick}
                     selIndex={currentPageIndex} />
-            </div>
-            <div>
-                {renderUpArrow(currentPageIndex)}
-            </div>
-            <div>
-                {renderDownArrow(currentPageIndex)}
-            </div>
-            <div>
-                {renderPage(currentPageIndex)}
             </div>
         </div>
     );

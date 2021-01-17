@@ -3,9 +3,9 @@ import React from 'react';
 import Experience from '../../components/experience/Experience';
 
 
-const NodeJSExpressPage = () => {
+const NodeJSExpressPage = ({className}) => {
   return (
-    <div>
+    <div className={className}>
       <h1 className="title">Work Experience</h1>
       <div className="work-experience">
         <Experience 

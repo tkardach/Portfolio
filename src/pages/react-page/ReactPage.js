@@ -1,9 +1,9 @@
 import './ReactPage.css';
 import React from 'react';
 
-const ReactPage = () => {
+const ReactPage = ({className}) => {
   return (
-    <div>
+    <div className={className}>
         <p>React state works</p>
     </div>
   );

@@ -1,10 +1,10 @@
 import './Kebab.css';
-import React, { useState } from 'react';
+import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCircle } from '@fortawesome/free-solid-svg-icons'
 
 
-const Kebab = ({count, selIndex, vertical, size, color, selColor, kebabClick}) => {
+const Kebab = ({className, count, selIndex, vertical, size, color, selColor, kebabClick}) => {
     const newSize = size ? size : '16px';
     const newCount = count ? count : 3;
     const newVertical = vertical ? true : false;
@@ -12,10 +12,7 @@ const Kebab = ({count, selIndex, vertical, size, color, selColor, kebabClick}) =
     const newSelColor = selColor ? selColor : 'white';
     const newKebabClick = kebabClick ? kebabClick : (index) => {};
     const newSelIndex = selIndex ? selIndex : 0;
-
-    const [kebabIndex, setKebabIndex] = useState(0);
     
-
     const dots = [];
 
     const iconStyle = {
@@ -36,7 +33,6 @@ const Kebab = ({count, selIndex, vertical, size, color, selColor, kebabClick}) =
 
     const changeState = (index) => {
         if (!isNaN(index)) {
-            setKebabIndex(index);
             newKebabClick(index);
         }
     }
@@ -50,13 +46,13 @@ const Kebab = ({count, selIndex, vertical, size, color, selColor, kebabClick}) =
                 <FontAwesomeIcon 
                     icon={faCircle} 
                     className="kebab-icon"
-                    style={{...iconStyle, ...(kebabIndex === i ? selectedColor : unselectedColor)}}/>
+                    style={{...iconStyle, ...(newSelIndex === i ? selectedColor : unselectedColor)}}/>
             </div>
         )
     }
 
     return (
-        <div>
+        <div className={className}>
             {dots}
         </div>
     );

@@ -8,7 +8,6 @@
   left: 0;
   bottom: 0;
   right: 0;
-  overflow: hidden;
   overflow-y: auto;
 }
 
@@ -26,7 +25,7 @@
 }
 
 .back-button {
-  position: absolute;
+  position: fixed;
   top: 15px;
   left: 15px;
   z-index: 1;
