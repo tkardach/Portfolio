@@ -162,4 +162,16 @@
     .work-experience-list {
         font-size: 12px;
     }
+
+    .experience-icon img {
+        width: 64px;
+        height: 64px;
+    }
+    .experience-description {
+        left: 81px;
+    }
+
+    .experience-title-container {
+        right: 120px;
+    }
 }

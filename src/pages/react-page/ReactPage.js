@@ -9,7 +9,7 @@ const ReactPage = ({className}) => {
       <h1 className="title">Projects</h1>
       <div className="work-experience">
         <Experience 
-          iconUrl="ThermoFisherLogo_64.png"
+          iconUrl="Logo64.png"
           title="Front End Web Developer"
           company="Myself"
           fromYear="2020">

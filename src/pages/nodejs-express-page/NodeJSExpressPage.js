@@ -41,7 +41,7 @@ const NodeJSExpressPage = ({className}) => {
         <h1 className="title">Projects</h1>
         <div className="work-experience">
           <Experience 
-              iconUrl="ThermoFisherLogo_64.png"
+              iconUrl="SwimClubLogo_64.png"
               title="Full Stack Developer"
               company="Saratoga Swim Club (non-profit)"
               fromYear="2020"

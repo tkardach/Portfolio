@@ -31,9 +31,9 @@ const AngularPage = ({className}) => {
         <h1 className="title">Projects</h1>
         <div className="work-experience">
           <Experience 
-            iconUrl="ThermoFisherLogo_64.png"
+            iconUrl="Logo64.png"
             title="Full Stack Developer"
-            company="Mayself"
+            company="Myself"
             fromYear="2020"
             toYear="Present">
             <p className="work-experience-title">FinanceJS Project</p>
@@ -49,7 +49,7 @@ const AngularPage = ({className}) => {
               rel="noreferrer">Link to FinanceJS</a>
           </Experience>
           <Experience 
-              iconUrl="ThermoFisherLogo_64.png"
+              iconUrl="SwimClubLogo_64.png"
               title="Full Stack Developer"
               company="Saratoga Swim Club (non-profit)"
               fromYear="2020"
