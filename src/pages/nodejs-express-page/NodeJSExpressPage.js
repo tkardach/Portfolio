@@ -42,7 +42,7 @@ const NodeJSExpressPage = ({className}) => {
         <div className="work-experience">
           <Experience 
               iconUrl="ThermoFisherLogo_64.png"
-              title="Treasurer/Full Stack Engineer"
+              title="Full Stack Developer"
               company="Saratoga Swim Club (non-profit)"
               fromYear="2020"
               toYear="">

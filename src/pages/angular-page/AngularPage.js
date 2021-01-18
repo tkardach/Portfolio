@@ -32,8 +32,8 @@ const AngularPage = ({className}) => {
         <div className="work-experience">
           <Experience 
             iconUrl="ThermoFisherLogo_64.png"
-            title="Full Stack Web Designer"
-            company="Saratoga Swim Club (non-profit)"
+            title="Full Stack Developer"
+            company="Mayself"
             fromYear="2020"
             toYear="Present">
             <p className="work-experience-title">FinanceJS Project</p>
@@ -50,7 +50,7 @@ const AngularPage = ({className}) => {
           </Experience>
           <Experience 
               iconUrl="ThermoFisherLogo_64.png"
-              title="Treasurer/Full Stack Engineer"
+              title="Full Stack Developer"
               company="Saratoga Swim Club (non-profit)"
               fromYear="2020"
               toYear="">
