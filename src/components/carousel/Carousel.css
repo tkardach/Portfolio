@@ -3,6 +3,10 @@
   overflow-y: auto!important;
 }
 
+.carousel-content-child {
+  margin-bottom: 50px;
+}
+
 .carousel-kebab-container-vertical {
   position: absolute;
   bottom: 0;

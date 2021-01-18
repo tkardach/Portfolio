@@ -33,6 +33,10 @@
   color: white;
 }
 
+.no-animation {
+  height: 100%;
+}
+
 @media (min-width: 850px) {
   .main {
     left: 400px;

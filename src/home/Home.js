@@ -26,7 +26,7 @@ const Home = ({className}) => {
      * @param {PageState} state state of the Home component
      */
     const renderPage = (state) => {
-        let transition = '';
+        let transition = 'no-animation';
         if (!isMobile)
             transition = state < previousPageState ? "animateTransitionDown" : "animateTransitionUp";
         

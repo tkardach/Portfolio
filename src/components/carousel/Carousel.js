@@ -11,7 +11,7 @@ const Carousel = ({className, vertical, children}) => {
 
     const pageCount = Children.count(children);
     const newVertical = vertical ? true : false;
-    const newChildren = children ? children : [];
+    const newChildren = children ? (Array.isArray(children) ? children : [children]): [];
     const newKebabClass = newVertical ? "carousel-kebab-container-vertical" : "carousel-kebab-container-horizontal"
     
     const previousPageIndex = usePrevious(pageIndex);
@@ -51,8 +51,8 @@ const Carousel = ({className, vertical, children}) => {
     }
 
     const renderPage = (currentIndex) => {
-        const transition = 
-            previousPageIndex !== undefined ?
+        let transition = "carousel-content-child ";
+        transition += previousPageIndex !== undefined ?
             (newVertical ? 
                 currentIndex < previousPageIndex ? "animateTransitionDown" : "animateTransitionUp" :
                 currentIndex < previousPageIndex ? "animateTransitionLeft" : "animateTransitionRight") : "";
@@ -72,14 +72,14 @@ const Carousel = ({className, vertical, children}) => {
         <div className={className}>
             {renderBackArrow(currentPageIndex)}
             {renderForwardArrow(currentPageIndex)}
+            <Kebab 
+                className={newKebabClass}
+                count={pageCount}
+                vertical={newVertical}
+                kebabClick={kebabClick}
+                selIndex={currentPageIndex} />
             <div className="carousel-content">
                 {renderPage(currentPageIndex)}
-                <Kebab 
-                    className={newKebabClass}
-                    count={pageCount}
-                    vertical={newVertical}
-                    kebabClick={kebabClick}
-                    selIndex={currentPageIndex} />
             </div>
         </div>
     );

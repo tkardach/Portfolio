@@ -20,7 +20,14 @@ code {
 }
 
 .work-experience {
+  text-align: left;
   margin: 15px 10%;
+}
+
+.work-experience-title {
+}
+
+.work-experience-description {
 }
 
 .generic-page {

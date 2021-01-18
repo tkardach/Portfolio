@@ -9,7 +9,7 @@ const OverviewPage = ({className}) => {
         <h1 id="overview-title" className="title">Back End/Full Stack Software Engineer</h1>
         <div id="statement">
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the
+          I am a Full Stack software engineer skilled in Object-Oriented Design and Programming with a focus on back-end development.
           </p>
         </div>
         <h2 id="skill-title">Skill Confidence</h2>

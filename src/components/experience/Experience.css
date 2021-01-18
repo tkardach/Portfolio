@@ -17,7 +17,7 @@
     position: absolute;
     left: 0;
     top: 0;
-    right: 72px;
+    right: 90px;
 }
 
 .experience-icon {
@@ -87,6 +87,34 @@
     margin: 75px 15px 15px 15px;
 }
 
+.work-experience-title {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.work-experience-description {
+    font-size: 10px;
+    margin: 0;
+}
+
+.work-experience-challenges {
+    font-weight: bold;
+    font-size: 12px;
+    margin: 5px 0;
+}
+
+.work-experience-problem-solution {
+    font-weight: bold;
+    font-size: 10px;
+    margin: 0;
+}
+
+.work-experience-list {
+    margin: 0;
+    font-size: 10px;
+}
+
 @media(min-width: 850px) {
     .vertical {
         border-left: 2px solid;
@@ -111,5 +139,26 @@
 
     .experience-duration {
         width: 120px;
+    }
+
+    .work-experience-title {
+        font-size: 14px;
+    }
+
+    .work-experience-description {
+        font-size: 12px;
+    }
+
+    .work-experience-challenges {
+        font-size: 14px;
+        margin: 10px 0;
+    }
+
+    .work-experience-problem-solution {
+        font-size: 12px;
+    }
+
+    .work-experience-list {
+        font-size: 12px;
     }
 }
