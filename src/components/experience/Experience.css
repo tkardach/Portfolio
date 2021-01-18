@@ -69,6 +69,7 @@
 }
 
 .experience-years {
+    text-align: center;
     float: right;
     font-size: 10px;
     line-height: 50px;

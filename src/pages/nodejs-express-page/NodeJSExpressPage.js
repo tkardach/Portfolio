@@ -21,30 +21,31 @@ const NodeJSExpressPage = ({className}) => {
             <ul className="work-experience-list">
               <li>Single handedely designed, tested and developed web application during spare time with ThermoFisher Scientific.</li>
               <li>Saves 20 minutes per application build through automated process.</li>
+              <li>Streamlined multiple time consuming tasks such as building installers, comparing changes between builds, and creating installers for feature branches.</li>
               <li>Web API developed using NodeJS with ExpressJS, front-end developed using AngularJS.</li>
             </ul>
             <br/>
             <p className="work-experience-challenges">Challenges</p>
             <p className="work-experience-problem-solution">Problem</p>
             <p className="work-experience-description">
-              The existing application build script was well developed using command line scripting, 
+              The existing application build script was well developed using command line operations, so life-cycle commands such as build output, completed, or failed were not easily captured within NodeJS.
             </p>
             <p className="work-experience-problem-solution">Solution</p>
             <p className="work-experience-description">
-              Instead of forcing users to change their browser cookie settings, I created a separate parallel website using the same domain which served the specific purpose of making reservations.
+              Instead of rewriting the build script using a more NodeJS friendly system, I made minor 
             </p>
           </Experience>
         </div>
       </div>
       <div>
-      <h1 className="title">Projects</h1>
+        <h1 className="title">Projects</h1>
         <div className="work-experience">
           <Experience 
               iconUrl="ThermoFisherLogo_64.png"
-              title="Treasurer/Software Engineer"
+              title="Treasurer/Full Stack Engineer"
               company="Saratoga Swim Club (non-profit)"
               fromYear="2020"
-              toYear="Present">
+              toYear="">
               <p className="work-experience-title">Reservation System</p>
               <p className="work-experience-description">Simple calendar reservation system for managing swim club member pool times during COVID-19 government mandated safety regulations.</p>
               <ul className="work-experience-list">

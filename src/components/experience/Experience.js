@@ -3,8 +3,7 @@ import React from 'react';
 
 
 const Experience = ({iconUrl, title, company, fromYear, toYear, children}) => {
-    const newFromYear = fromYear ? fromYear : '2009';
-    const newToYear = toYear ? toYear : 'Present';
+    const yearString = fromYear ? toYear ? `${fromYear} - ${toYear}` : fromYear : '2009 - Present'
     const newTitle = title ? title : 'Title';
     const newCompany = company ? company : 'Company';
     const newIconUrl = iconUrl ? iconUrl : 'logo192.png';
@@ -25,7 +24,7 @@ const Experience = ({iconUrl, title, company, fromYear, toYear, children}) => {
                 </div>
                 <div className="experience-duration">
                     <div className="vertical"/>
-                    <p className="experience-years">{newFromYear} - {newToYear}</p>
+                    <p className="experience-years">{yearString}</p>
                 </div>
             </div>
             <div className="experience-summary">

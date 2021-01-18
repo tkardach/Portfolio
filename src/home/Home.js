@@ -5,6 +5,7 @@ import CPPCSDotNetPage from '../pages/cpp-cs-dotnet-page/CPPCSDotNetPage';
 import NodeJSExpressPage from '../pages/nodejs-express-page/NodeJSExpressPage';
 import AngularPage from '../pages/angular-page/AngularPage';
 import ReactPage from '../pages/react-page/ReactPage';
+import AboutPage from '../pages/about-page/AboutPage';
 import Sidebar from '../components/sidebar/Sidebar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
@@ -13,7 +14,7 @@ import { useMediaQuery } from 'react-responsive';
 import { usePrevious } from '../shared/shared';
 
 
-const PageState = Object.freeze({"overview": 0, "cpp_cs_dotnet": 1, "nodejs_express": 2, "angularjs": 3, "react": 4});
+const PageState = Object.freeze({"overview": 0, "cpp_cs_dotnet": 1, "nodejs_express": 2, "angularjs": 3, "react": 4, "about": 5});
 
 const Home = ({className}) => {
     const [pageState, setPageState] = useState(PageState.overview);
@@ -28,14 +29,36 @@ const Home = ({className}) => {
     const renderPage = (state) => {
         let transition = 'no-animation';
         if (!isMobile)
-            transition = state < previousPageState ? "animateTransitionDown" : "animateTransitionUp";
+            transition = state < previousPageState ? 'animateTransitionDown' : 'animateTransitionUp';
         
+        // Unhighlight all buttons
+        const elems = document.getElementsByClassName('active');
+        [].forEach.call(elems, function (el) {
+            el.classList.remove('active')
+        })
+
+        const button = document.getElementById(
+            state === PageState.cpp_cs_dotnet ? 'cppdnet-button':
+            state === PageState.nodejs_express ? 'nodejs-button' :
+            state === PageState.angularjs ? 'angular-button' : 
+            state === PageState.react ? 'react-button' : 
+            state === PageState.about ? 'about-button' : 'overview-button'
+        );
+
+        // Hightlight the active button
+        if (button) {
+            button.classList.remove('active');
+            button.classList.add('active');
+        }
+        
+        // Render the page based on the current state
         return (
             state === PageState.overview ? <OverviewPage key={state} className={transition}/>:
             state === PageState.cpp_cs_dotnet ? <CPPCSDotNetPage key={state} className={transition}/>:
             state === PageState.nodejs_express ? <NodeJSExpressPage key={state} className={transition}/> :
             state === PageState.angularjs ? <AngularPage key={state} className={transition}/> : 
-            state === PageState.react ? <ReactPage key={state} className={transition}/>: <div/>
+            state === PageState.react ? <ReactPage key={state} className={transition}/>: 
+            state === PageState.about ? <AboutPage key={state} className={transition}/> : <div/>
         );
     };
 
@@ -79,20 +102,29 @@ const Home = ({className}) => {
             }
             <Sidebar profile={profile} className="dissapear" hide={hideSidebar && isMobile}>
                 <button 
+                    id="overview-button"
                     className="sidebar-item" 
                     onClick={() => changeState(PageState.overview)}>Overview</button>
                 <button 
+                    id="cppdnet-button"
                     className="sidebar-item" 
                     onClick={() => changeState(PageState.cpp_cs_dotnet)}>C#/C++ .Net Framework</button>
                 <button 
+                    id="nodejs-button"
                     className="sidebar-item" 
                     onClick={() => changeState(PageState.nodejs_express)}><FontAwesomeIcon icon={faNodeJs}/> NodeJS + Express</button>
                 <button 
+                    id="angular-button"
                     className="sidebar-item"
                     onClick={() => changeState(PageState.angularjs)}><FontAwesomeIcon icon={faAngular}/> Angular</button>
                 <button 
+                    id="react-button"
                     className="sidebar-item"
                     onClick={() => changeState(PageState.react)}><FontAwesomeIcon icon={faReact}/> React</button>
+                <button 
+                    id="about-button"
+                    className="sidebar-item"
+                    onClick={() => changeState(PageState.about)}>About</button>
             </Sidebar>
             <div className="main"> 
                 {renderPage(currentPage)}

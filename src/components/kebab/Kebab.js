@@ -31,12 +31,17 @@ const Kebab = ({className, count, selIndex, vertical, size, color, selColor, keb
         display: 'inline-block'
     }
 
+    /**
+     * Call the kebabClick callback funtion with the selected index
+     * @param {int} index currently selected kebab index
+     */
     const changeState = (index) => {
         if (!isNaN(index)) {
             newKebabClick(index);
         }
     }
 
+    // Generate a list of kebab circles 
     for (let i=0; i<newCount; i++) {
         dots.push(
             <div

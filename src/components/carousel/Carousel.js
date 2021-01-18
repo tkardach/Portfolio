@@ -18,10 +18,18 @@ const Carousel = ({className, vertical, children}) => {
 
     const currentPageIndex = pageIndex;
 
+    /**
+     * Callback for kebab clicks
+     * @param {int} index index of the currently selected kebab index
+     */
     const kebabClick = (index) => {
         setPageIndex(index);
     }
 
+    /**
+     * Renders the back arrow, responsible for navigating back an index
+     * @param {int} currentIndex currently selected page index
+     */
     const renderBackArrow = (currentIndex) => {
         const carouselClass = newVertical ? "carousel-up-arrow" : "carousel-left-arrow";
         const chevron = newVertical ? faChevronUp : faChevronLeft;
@@ -36,6 +44,10 @@ const Carousel = ({className, vertical, children}) => {
         )
     }
 
+    /**
+     * Renders the forward arrow, responsible for navigating forward an index
+     * @param {int} currentIndex currently selected page index
+     */
     const renderForwardArrow = (currentIndex) => {
         const carouselClass = newVertical ? "carousel-down-arrow" : "carousel-right-arrow";
         const chevron = newVertical ? faChevronDown : faChevronRight;
@@ -50,7 +62,12 @@ const Carousel = ({className, vertical, children}) => {
         )
     }
 
+    /**
+     * Renders the currently selected page
+     * @param {int} currentIndex currently selected page index
+     */
     const renderPage = (currentIndex) => {
+        // Render the currently selected child element
         let transition = "carousel-content-child ";
         transition += previousPageIndex !== undefined ?
             (newVertical ? 
