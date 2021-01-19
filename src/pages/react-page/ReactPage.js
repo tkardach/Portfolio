@@ -15,7 +15,7 @@ const ReactPage = ({className}) => {
           fromYear="2020">
           <p className="work-experience-title">This Website!</p>
           <p className="work-experience-description">Simplistic portfolio website used for consolidating all of my skills onto a single platform.</p>
-          <ul className="work-experience-list">
+          <ul>
             <li>Designed and developed portfolio website from scratch.</li>
             <li>Developed over the course of a few days with no prior knowledge or experience with ReactJS.</li>
           </ul>

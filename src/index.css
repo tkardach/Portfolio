@@ -80,13 +80,20 @@ code {
 }
 
 .animateTransitionDown {
+  overflow: hidden!important;
   height: 100%;
   animation: pageTransitionDown 0.5s;
 }
 
 @keyframes pageTransitionDown {
-  from { transform: translate(0, -100vh); }
-  to { transform: translate(0, 0); }
+  from { 
+    height: 200vh;
+    transform: translate(0, -100vh); 
+  }
+  to { 
+    height: 100%; 
+    transform: translate(0, 0); 
+  }
 }
 
 /* 

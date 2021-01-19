@@ -18,21 +18,12 @@ const CPPCSDotNetPage = ({className}) => {
               toYear="Present">
               <p className="work-experience-title">New Circuit Edit Software</p>
               <p className="work-experience-description">Windows application used to control an advanced Focused Ion Beam machine used for circuit edit.</p>
-              <ul className="work-experience-list">
-                <li></li>
-                <li>Extremely large code base spanning multiple different machines with dozens of supporting software developers.</li>
+              <ul>
+                <li>Worked as member of Scrum team with daily meetings.</li>
+                <li>Extremely large code base spanning multiple different machines with dozens of supporting software developers accross the globe.</li>
                 <li>Server codebase written in C++ using COM and utilizing windows registry.</li>
                 <li>Client codebase written in C# with WPF.</li>
               </ul>
-              <br/>
-              <p className="work-experience-challenges">Challenges</p>
-              <p className="work-experience-problem-solution">Problem</p>
-              <p className="work-experience-description">
-              </p>
-              <p className="work-experience-problem-solution">Solution</p>
-              <p className="work-experience-description">
-              </p>
-              <br/>
             </Experience>
             <Experience
               iconUrl="ThermoFisherLogo_64.png"
@@ -42,37 +33,53 @@ const CPPCSDotNetPage = ({className}) => {
               toYear="Present">
               <p className="work-experience-title">Legacy Circuit Edit Software</p>
               <p className="work-experience-description">Windows application used to control an advanced Focused Ion Beam machine used for circuit edit.</p>
+              <ul>
+                <li>Currently working as the sole software developer maintaining and developing for this project.</li>
+                <li>Worked as member of Scrum team with daily meetings.</li>
+                <li>Server codebase in C# with .Net Framework with some references to C++ classes through COM.</li>
+                <li>Client codebase in C# with .Net Framework with some references to C++ classes through COM, using Windows Forms and WPF</li>
+              </ul>
+              <p className="work-experience-challenges">Accomplishments</p>
               <ul className="work-experience-list">
                 <li>Assisted in migrating codebase from 32-bit to 64-bit.</li>
                 <li></li>
                 <li>
-                  Supported tasks to upgrade scan board, which involved: 
+                  Supported tasks to integrate new scan board with software, which involved: 
                   <ul>
-                    <li>Refactoring code base to </li>
+                    <li>Refactoring code base to accept new patterning shapes.</li>
+                    <li>Creating new structure for receiving imaging data.</li>
+                    <li>Generating proper matrix transformations between coordinate systems from hardware scanning to imaging.</li>
+                    <li>Altering existing calculations to work with new scan board.</li>
                   </ul>
                 </li>
                 <li>Updated and refactored client software to allow for creating advanced milling patterns.</li>
-                <li>Server codebase in C# with .Net Framework with some references to C++ classes through COM.</li>
-                <li>Client codebase in C# with .Net Framework with some references to C++ classes through COM, using Windows Forms and WPF</li>
               </ul>
-              <br/>
               <p className="work-experience-challenges">Challenges</p>
               <p className="work-experience-problem-solution">Problem</p>
-              <p className="work-experience-description">
+              <p className="work-experience-problem-solution-answer">
                 During migration from 32-bit to 64-bit OS, certain hardware drivers were incompatible with 64-bit.
               </p>
               <p className="work-experience-problem-solution">Solution</p>
-              <p className="work-experience-description">
-                Create an out-of-process 32-bit COM server which could be consumed by our 64-bit application.
+              <p className="work-experience-problem-solution-answer">
+                Created an out-of-process 32-bit COM server which could be consumed by our 64-bit application.
               </p>
               <br/>
               <p className="work-experience-problem-solution">Problem</p>
-              <p className="work-experience-description">
+              <p className="work-experience-problem-solution-answer">
                 Intensive post-processing affects were causing scanning slow-downs, due to scans with a high pixel count 4M+.
               </p>
               <p className="work-experience-problem-solution">Solution</p>
-              <p className="work-experience-description">
+              <p className="work-experience-problem-solution-answer">
                 Moved all post-processing actions onto GPU using DirectX pixel shaders, which made the code more readable and efficient.
+              </p>
+              <br/>
+              <p className="work-experience-problem-solution">Problem</p>
+              <p className="work-experience-problem-solution-answer">
+                Pixel interpolation was not working for small resolution images overlayed into larger resolution background texture.
+              </p>
+              <p className="work-experience-problem-solution">Solution</p>
+              <p className="work-experience-problem-solution-answer">
+                Refactored code to stop drawing smaller resolution images into the background texture, and instead use DirectX Sprites to draw overlayed images with their own resolution while still maintaining true aspect ratio relative to background texture.
               </p>
               <br/>
             </Experience>
@@ -84,19 +91,17 @@ const CPPCSDotNetPage = ({className}) => {
               toYear="2019">
               <p className="work-experience-title">CAD Software for Electron Microscopy</p>
               <p className="work-experience-description">Windows/Linux application used for navigating microscope devices using CAD interface as reference.</p>
-              <ul className="work-experience-list">
+              <ul>
+                <li>Worked as member of Scrum team with daily meetings.</li>
+                <li>Application interfaces with multiple different microscope devices through TCP/IP or RPC connection.</li>
                 <li>Application written in C++ with Qt.</li>
               </ul>
+              <p className="work-experience-challenges">Accomplishments</p>
+              <ul className="work-experience-list">
+                <li>Developed mock hardware interface so software can be tested without needing physical endpoint.</li>
+                <li>Developed RPC Adapter application responsible for translating requests from RPC to TCP/IP.</li>
+              </ul>
               <br/>
-              <p className="work-experience-challenges">Challenges</p>
-              <p className="work-experience-problem-solution">Problem</p>
-              <p className="work-experience-description">
-
-              </p>
-              <p className="work-experience-problem-solution">Solution</p>
-              <p className="work-experience-description">
-                Instead of rewriting the build script using a more NodeJS friendly system, I made minor 
-              </p>
             </Experience>
           </div>
         </div>
@@ -104,12 +109,33 @@ const CPPCSDotNetPage = ({className}) => {
           <h1 className="title">Projects</h1>
           <div className="work-experience">
             <Experience 
-              iconUrl="ThermoFisherLogo_64.png"
-              title="Software Engineer II"
-              company="ThermoFisher Scientific"
-              fromYear="2018"
-              toYear="Present">
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the</p>
+              iconUrl="Logo64.png"
+              title="Full Stack/Embedded Developer"
+              company="Myself"
+              fromYear="2020"
+              toYear="">
+              <p className="work-experience-title">Garage Door Opener</p>
+              <p className="work-experience-description">Converted a standard garage door into a WiFi controllable garage door.</p>
+              <ul>
+                <li>Garage door is controllable via IOS application as well as through Amazon's Alexa</li>
+                <li>Not intended to be developed for mass production, this was simply a fun project to play with microcontrollers and add a useful feature to my home.</li>
+                <li>Used Particle.io Photon developer board as a microcontroller for operating the garage door.</li>
+                <li>Embedded code written in C++, Front End written in Swift with SwiftUI.</li>
+              </ul>
+            </Experience>
+            <Experience 
+              iconUrl="Logo64.png"
+              title="Embedded Developer"
+              company="Myself"
+              fromYear="2020"
+              toYear="">
+              <p className="work-experience-title">Dead Man's Switch</p>
+              <p className="work-experience-description">Created power outlet which power cycles when connection to WiFi is lost; intended to restart router remotely.</p>
+              <ul>
+                <li>Intended to be used for my Wife's grandparents' cabin; they enjoy watching the blink cameras but the router often stops working.</li>
+                <li>Used Particle.io Photon developer board as a microcontroller for checking WiFi connection and power cycling outlet.</li>
+                <li>Embedded code written in C++.</li>
+              </ul>
             </Experience>
           </div>
         </div>

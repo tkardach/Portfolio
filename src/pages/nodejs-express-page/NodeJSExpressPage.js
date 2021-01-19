@@ -27,11 +27,11 @@ const NodeJSExpressPage = ({className}) => {
             <br/>
             <p className="work-experience-challenges">Challenges</p>
             <p className="work-experience-problem-solution">Problem</p>
-            <p className="work-experience-description">
-              The existing application build script was well developed using command line operations, so life-cycle commands such as build output, completed, or failed were not easily captured within NodeJS.
+            <p className="work-experience-problem-solution-answer">
+              
             </p>
             <p className="work-experience-problem-solution">Solution</p>
-            <p className="work-experience-description">
+            <p className="work-experience-problem-solution-answer">
               Instead of rewriting the build script using a more NodeJS friendly system, I made minor 
             </p>
           </Experience>
@@ -48,21 +48,23 @@ const NodeJSExpressPage = ({className}) => {
               toYear="">
               <p className="work-experience-title">Reservation System</p>
               <p className="work-experience-description">Simple calendar reservation system for managing swim club member pool times during COVID-19 government mandated safety regulations.</p>
-              <ul className="work-experience-list">
-                <li>Single handedely designed, tested, developed and deployed web application in 2 week time frame before pool club opening.</li>
-                <li>Automates time-consuming manual process of creating pool reservations which exceed 700+ reservations per week.</li>
-                <li>Serves 40+ pool club families who can securely login, make and edit reservations.</li>
+              <ul>
+                <li>Served 40+ pool club families who could securely login, make and edit reservations.</li>
                 <li>Web API developed using NodeJS with ExpressJS, front-end developed using AngularJS.</li>
                 <li>Server hosted from Rasbperry Pi using Ubuntu Server OS.</li>
               </ul>
-              <br/>
+              <p className="work-experience-challenges">Accomplishments</p>
+              <ul className="work-experience-list">
+                <li>Single handedely designed, tested, developed and deployed web application in 2 week time frame before pool club opening.</li>
+                <li>Automated time-consuming manual process of creating pool reservations which exceeded 700+ reservations per week.</li>
+              </ul>
               <p className="work-experience-challenges">Challenges</p>
               <p className="work-experience-problem-solution">Problem</p>
-              <p className="work-experience-description">
+              <p className="work-experience-problem-solution-answer">
                 I originally tried hosting the reservation system as an embedded calendar in the swim club's existing Google Site, but embeds show up as a different origin address; this caused requests to the server to show up as cross-origin, so users with cautious cookie settings were experiencing issues.
               </p>
               <p className="work-experience-problem-solution">Solution</p>
-              <p className="work-experience-description">
+              <p className="work-experience-problem-solution-answer">
                 Instead of forcing users to change their browser cookie settings, I created a separate parallel website using the same domain which served the specific purpose of making reservations.
               </p>
             </Experience>
