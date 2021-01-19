@@ -108,7 +108,7 @@ const Home = ({className}) => {
                 <button 
                     id="cppdnet-button"
                     className="sidebar-item" 
-                    onClick={() => changeState(PageState.cpp_cs_dotnet)}>C#/C++ .Net Framework</button>
+                    onClick={() => changeState(PageState.cpp_cs_dotnet)}>C++/C# .Net Framework</button>
                 <button 
                     id="nodejs-button"
                     className="sidebar-item" 
