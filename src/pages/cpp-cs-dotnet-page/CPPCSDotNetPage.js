@@ -10,21 +10,6 @@ const CPPCSDotNetPage = ({className}) => {
         <div>
           <h1 className="title">Work Experience</h1>
           <div className="work-experience">
-            <Experience 
-              iconUrl="ThermoFisherLogo_64.png"
-              title="Software Engineer II"
-              company="ThermoFisher Scientific"
-              fromYear="2020"
-              toYear="Present">
-              <p className="work-experience-title">New Circuit Edit Software</p>
-              <p className="work-experience-description">Windows application used to control an advanced Focused Ion Beam machine used for circuit edit.</p>
-              <ul>
-                <li>Worked as member of Scrum team with daily meetings.</li>
-                <li>Extremely large code base spanning multiple different machines with dozens of supporting software developers accross the globe.</li>
-                <li>Server codebase written in C++ using COM and utilizing windows registry.</li>
-                <li>Client codebase written in C# with WPF.</li>
-              </ul>
-            </Experience>
             <Experience
               iconUrl="ThermoFisherLogo_64.png"
               title="Software Engineer II"
@@ -35,14 +20,21 @@ const CPPCSDotNetPage = ({className}) => {
               <p className="work-experience-description">Windows application used to control an advanced Focused Ion Beam machine used for circuit edit.</p>
               <ul>
                 <li>Currently working as the sole software developer maintaining and developing for this project.</li>
-                <li>Worked as member of Scrum team with daily meetings.</li>
+                <li>Working as member of Scrum team with daily meetings.</li>
                 <li>Server codebase in C# with .Net Framework with some references to C++ classes through COM.</li>
                 <li>Client codebase in C# with .Net Framework with some references to C++ classes through COM, using Windows Forms and WPF</li>
               </ul>
               <p className="work-experience-challenges">Accomplishments</p>
               <ul className="work-experience-list">
                 <li>Assisted in migrating codebase from 32-bit to 64-bit.</li>
-                <li></li>
+                <li>Created web application for building software in my free time, which streamlined multiple time consuming tasks including:
+                  <ul>
+                    <li>Compiling the application and generating an installer, which was previously the responsibility of select developers</li>
+                    <li>Downloading the installer directly from the web server, as opposed to the shared file system</li>
+                    <li>Comparing changes between builds, which used to include comparing installer creation date with git commits</li>
+                    <li>Creating feature branches, which was the responsibility of select developers due to the complexity</li>
+                  </ul>
+                </li>
                 <li>
                   Supported tasks to integrate new scan board with software, which involved: 
                   <ul>
@@ -82,6 +74,21 @@ const CPPCSDotNetPage = ({className}) => {
                 Refactored code to stop drawing smaller resolution images into the background texture, and instead use DirectX Sprites to draw overlayed images with their own resolution while still maintaining true aspect ratio relative to background texture.
               </p>
               <br/>
+            </Experience>
+            <Experience 
+              iconUrl="ThermoFisherLogo_64.png"
+              title="Software Engineer II"
+              company="ThermoFisher Scientific"
+              fromYear="2020"
+              toYear="Present">
+              <p className="work-experience-title">New Circuit Edit Software</p>
+              <p className="work-experience-description">Windows application used to control an advanced Focused Ion Beam machine used for circuit edit.</p>
+              <ul>
+                <li>Working as member of Scrum team with daily meetings.</li>
+                <li>Extremely large code base spanning multiple different machines with dozens of supporting software developers accross the globe.</li>
+                <li>Server codebase written in C++ using COM and utilizing windows registry.</li>
+                <li>Client codebase written in C# with WPF.</li>
+              </ul>
             </Experience>
             <Experience 
               iconUrl="ThermoFisherLogo_64.png"
