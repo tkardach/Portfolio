@@ -39,6 +39,11 @@ code {
   transition: cardUnder 0.5s forwards;
 }
 
+.link {
+  cursor: pointer;
+  text-decoration:underline;
+}
+
 @keyframes cardUnder {
   0% {  }
   100% { 

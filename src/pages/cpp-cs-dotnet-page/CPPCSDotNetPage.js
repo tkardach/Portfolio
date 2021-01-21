@@ -4,7 +4,10 @@ import Experience from '../../components/experience/Experience';
 import Carousel from '../../components/carousel/Carousel';
 
 
-const CPPCSDotNetPage = ({className}) => {
+const CPPCSDotNetPage = ({className, goToAngularPage, goToNodePage}) => {
+  const goToAngularPageFunc = goToAngularPage && typeof goToAngularPage === 'function' ? goToAngularPage : () => {};
+  const goToNodePageFunc = goToNodePage && typeof goToNodePage === 'function' ? goToNodePage : () => {};
+
   return (
       <Carousel className={className} vertical={false}>
         <div>
@@ -37,14 +40,9 @@ const CPPCSDotNetPage = ({className}) => {
                     <li>Altering existing patterning calculations to work with new scan board</li>
                   </ul>
                 </li>
-                <li>Created web application for building software in my free time, which streamlined multiple time consuming tasks including:
-                  <ul>
-                    <li>Compiling the application and generating an installer, which was previously the responsibility of select developers</li>
-                    <li>Downloading the installer directly from the web server, as opposed to the shared file system</li>
-                    <li>Comparing changes between builds, which used to include comparing installer creation date with git commits</li>
-                    <li>Creating feature branches, which was the responsibility of select developers due to the complexity</li>
-                  </ul>
-                </li>
+                <li>
+                  Created web application for creating application installers using AngularJS and NodeJS/ExpressJS 
+                  (See <span className="link" onClick={goToAngularPageFunc}>AngularJS</span> and <span className="link" onClick={goToNodePageFunc}>NodeJS</span> sections for more information)</li>
               </ul>
               <p className="work-experience-challenges">Challenges</p>
               <p className="work-experience-problem-solution">Problem</p>

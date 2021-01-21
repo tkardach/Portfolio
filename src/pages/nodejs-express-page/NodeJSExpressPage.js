@@ -19,10 +19,20 @@ const NodeJSExpressPage = ({className}) => {
             <p className="work-experience-title">Application Builder</p>
             <p className="work-experience-description">User friendly web application so non-software engineer users could easily create new application builds</p>
             <ul className="work-experience-list">
+              <li>Front-end developed using AngularJS, web API back-end developed using NodeJS with ExpressJS</li>
+              <li>MongoDB used as database</li>
+            </ul>
+            <p className="work-experience-challenges">Accomplishments</p>
+            <ul className="work-experience-list">
               <li>Single handedely designed, tested and developed web application during spare time with ThermoFisher Scientific</li>
-              <li>Saves 20 minutes per application build through automated process</li>
-              <li>Streamlined multiple time consuming tasks such as building installers, comparing changes between builds, and creating installers for feature branches</li>
-              <li>Web API developed using NodeJS with ExpressJS, front-end developed using AngularJS</li>
+              <li>Streamlined multiple time consuming tasks including:
+                <ul>
+                  <li>Compiling the application and generating an installer</li>
+                  <li>Downloading the installer can be done directly from the web server, as opposed to the shared file system</li>
+                  <li>Comparing changes between builds takes seconds, where before we were forced to compare the installer creation date with git commits</li>
+                  <li>Creating feature branches were a tedious process involving several steps; this now takes second with the builder web application</li>
+                </ul>
+              </li>
             </ul>
             <br/>
           </Experience>

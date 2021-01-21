@@ -54,7 +54,12 @@ const Home = ({className}) => {
         // Render the page based on the current state
         return (
             state === PageState.overview ? <OverviewPage key={state} className={transition}/> :
-            state === PageState.cpp_cs_dotnet ? <CPPCSDotNetPage key={state} className={transition}/> :
+            state === PageState.cpp_cs_dotnet ? 
+                <CPPCSDotNetPage 
+                    key={state} 
+                    className={transition} 
+                    goToAngularPage={() => {changeState(PageState.angularjs)}}
+                    goToNodePage={() => {changeState(PageState.nodejs_express)}}/> :
             state === PageState.nodejs_express ? <NodeJSExpressPage key={state} className={transition}/> :
             state === PageState.angularjs ? <AngularPage key={state} className={transition}/> : 
             state === PageState.react ? <ReactPage key={state} className={transition}/> : 
