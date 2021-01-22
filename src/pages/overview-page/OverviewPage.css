@@ -8,7 +8,7 @@
 }
 
 #statement {
-    margin: 0 5%;
+    margin: 0 15%;
     padding: 20px 50px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -39,6 +39,14 @@
     width: 50%;
 }
 
+
+@media (min-width: 1000px) {
+    #other-skills-section {
+        width: 80%;
+        margin: auto;
+    }
+}
+
 @media (min-width: 850px) and (max-width: 1000px) {
     #other-skills-section .box {
         width: 100%;
@@ -49,10 +57,19 @@
     #other-skills-section .box {
         width: 50%;
     }
+
+    #other-skills-section {
+        width: 90%;
+        margin: auto;
+    }
 }
 
 @media (max-width: 500px) {
     #other-skills-section .box {
         width: 100%;
+    }
+
+    #statement {
+        margin: 0 5%;
     }
 }
