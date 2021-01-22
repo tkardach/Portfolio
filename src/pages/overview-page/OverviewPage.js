@@ -5,14 +5,15 @@ import Skill from '../../components/skill/Skill';
 
 const OverviewPage = ({className}) => {
   return (
-    <div id="overview" className={className}>
+    <div className={className}>
+      <div id="overview">
         <h1 id="overview-title" className="title">Back End/Full Stack Software Engineer</h1>
         <div id="statement">
           <p>
           I am a Full Stack software engineer skilled in Object-Oriented Design and Programming with a focus on back-end development
           </p>
         </div>
-        <h2 id="skill-title">Skill Confidence</h2>
+        <h2 id="skill-title">Language Confidence</h2>
         <div id="skills-section">
           <Skill
             name="C#"
@@ -35,6 +36,46 @@ const OverviewPage = ({className}) => {
             percentage={70}
             color={'#FBD140'}/>
         </div>
+        <h2 id="skill-title">Other Skills</h2>
+        <div id="other-skills-section">
+          <div class="box">
+            <Skill
+              name="WPF"
+              percentage={65}
+              color={'#1397C4'}/>
+            <Skill
+              name="WinForms"
+              percentage={95}
+              color={'#91C300'}/>
+            <Skill
+              name="HTML5"
+              percentage={80}
+              color={'#E44D26'}/>
+            <Skill
+              name="CSS"
+              percentage={65}
+              color={'#1B73BA'}/>
+          </div>
+          <div class="box">
+            <Skill
+              name=".Net"
+              percentage={60}
+              color={'#682A7B'}/>
+            <Skill
+              name="Algorithms"
+              percentage={75}
+              color={'#444444'}/>
+            <Skill
+              name="Linux OS"
+              percentage={75}
+              color={'#F5C021'}/>
+              <Skill
+                name="Windows OS"
+                percentage={100}
+                color={'#00ADEF'}/>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

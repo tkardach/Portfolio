@@ -1,23 +1,32 @@
 import './ProgressBar.css';
 import React from 'react';
 
-const ProgressBar = ({percentage, name, color, lblcolor}) => {
+const ProgressBar = ({className, percentage, name, color, lblcolor, lblFontSize}) => {
+    const percentageSet = percentage ? true : (percentage === 0 ? true : false);
+    const fontSize = lblFontSize ? lblFontSize : '12px';
+    className = className ? className : '';
 
     const fillerStyle = {
-        width: percentage ? `${percentage}%` : '100%',
+        width: percentageSet ? `${percentage}%` : '100%',
         backgroundColor: color ? color : 'blue',
     }
 
     const labelStyle = {
         color: lblcolor ? lblcolor : 'white',
+        fontSize: fontSize,
+        height: fontSize
+    }
+
+    const nameStyle = {
+        width: percentageSet ? `calc(${percentage}% - ${fontSize})` : 'auto'
     }
 
     return (
-        <div className="progress-container">
+        <div className={`${className} progress-container`}>
             <div style={fillerStyle} className="progress-filler">
                 <p 
                     className="progress-label float-left" 
-                    style={labelStyle}>{name}</p>
+                    style={{...labelStyle, ...nameStyle}}>{name}</p>
                 <p 
                     className="progress-label float-right" 
                     style={labelStyle}>{`${percentage}%`}</p>

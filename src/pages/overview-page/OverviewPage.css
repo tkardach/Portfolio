@@ -1,5 +1,6 @@
 #overview {
     height: 100%;
+    overflow-y: auto;
 }
 
 #overview-title {
@@ -25,7 +26,33 @@
     display: inline-block;
     width: 100%;
     height: auto;
-    margin-bottom: 20px;
 }
 
+#other-skills-section {
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
 
+#other-skills-section .box {
+    width: 50%;
+}
+
+@media (min-width: 850px) and (max-width: 1000px) {
+    #other-skills-section .box {
+        width: 100%;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 850px) {
+    #other-skills-section .box {
+        width: 50%;
+    }
+}
+
+@media (max-width: 500px) {
+    #other-skills-section .box {
+        width: 100%;
+    }
+}
