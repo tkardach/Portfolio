@@ -40,6 +40,7 @@ code {
 }
 
 .link {
+  color: black;
   cursor: pointer;
   text-decoration:underline;
 }

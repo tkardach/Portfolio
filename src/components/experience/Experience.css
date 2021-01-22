@@ -83,9 +83,8 @@
 
 .experience-summary {
     font-size: 12px;
-    display: inline-block;
     text-align: left;
-    margin: 75px 15px 15px 15px;
+    padding: 75px 15px 15px 15px;
 }
 
 .work-experience-title {
@@ -103,6 +102,22 @@
     font-weight: bold;
     font-size: 12px;
     margin: 5px 0;
+}
+
+.work-experience-relavent-skills {
+    width: 100%;
+    font-size: 12px;
+    line-height: 12px;
+    text-align: center;
+    margin: 0;
+}
+
+.work-experience-relavent-skill {
+    display: inline-block;
+    margin: 5px;
+    padding: 5px;
+    background-color: rgb(211, 211, 211);
+    border-radius: 5px;
 }
 
 .work-experience-problem-solution {
@@ -161,16 +176,6 @@
         margin: 10px 0;
     }
 
-    .work-experience-problem-solution {
-        font-size: 14px;
-    }
-
-
-    .work-experience-problem-solution-answer {
-        font-size: 14px;
-        margin: 0 0 0 10px;
-    }
-
     .work-experience-list {
         font-size: 14px;
     }
@@ -185,5 +190,15 @@
 
     .experience-title-container {
         right: 120px;
+    }
+    
+    .work-experience-relavent-skills {
+        font-size: 14px;
+        line-height: 14px;
+    }
+
+    .work-experience-relavent-skill {
+        margin: 5px;
+        padding: 10px;
     }
 }
