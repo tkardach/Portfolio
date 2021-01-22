@@ -1,9 +1,17 @@
 
 #about-page {
   margin: 0 5%;
-  padding: 20px 50px;
+  padding: 20px 30px;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 5px;
   text-align: left;
+  font-size: 14px;
+}
+
+@media(min-width: 850px) {
+  #about-page {
+    padding: 20px 40px;
+    font-size: 18px;
+  }
 }

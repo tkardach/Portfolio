@@ -10,7 +10,7 @@ const OverviewPage = ({className}) => {
         <h1 id="overview-title" className="title">Back End/Full Stack Software Engineer</h1>
         <div id="statement">
           <p>
-          I am a Full Stack software engineer skilled in Object-Oriented Design and Programming with a focus on back-end development
+          I am a Full Stack Software Engineer skilled in Object-Oriented Design and Programming with a focus on back-end development
           </p>
         </div>
         <h2 id="skill-title">Language Confidence</h2>
