@@ -108,7 +108,7 @@ const Home = ({className}) => {
             <Sidebar profile={profile} className="dissapear" hide={hideSidebar && isMobile}>
                 <button 
                     id="overview-button"
-                    className="sidebar-item" 
+                    className="sidebar-item active" 
                     onClick={() => changeState(PageState.overview)}>Overview</button>
                 <button 
                     id="cppdnet-button"

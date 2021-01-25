@@ -7,12 +7,12 @@ const AboutPage = ({className}) => {
     <div className={className}>
       <h1 className="title">About Me</h1>
       <div id="about-page">
+        <p style={{float: 'left'}}><img className="about-image"  alt="test" src="https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg"/></p>
         <p>
-          &emsp;I am a software engineer! I enjoy what I do; this website is a testament to that statement. When I am not currently
-          engaged in a project, I am typically thinking about new project ideas. I love learning new concepts and exploring what's 
-          popular in the software world. Most of all, I love perfecting my craft; I always approach a project with a UML diagram
-          and a project structure, and if I ever deviate from the original design during development I always learn a valuable 
-          lesson that I take with me to the next project.
+          &emsp;Hi, I'm Tommy, I'm a Software Engineer based in Scotts Valley, California. I am an excellent programmer
+          with experience developing for applications which operate complex machinery. In my free time I enjoy engaging in projects
+          that refine my skills, broaden my knowledge, and teach me valuable lessons which I can take with me to the next project. 
+          When I'm not programming you can find me playing Mario Kart with my wife or playing online Chess. 
         </p>
       </div>
     </div>

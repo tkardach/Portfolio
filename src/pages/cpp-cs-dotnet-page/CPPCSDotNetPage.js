@@ -56,7 +56,7 @@ const CPPCSDotNetPage = ({className, goToAngularPage, goToNodePage}) => {
 
   const garageDoorOpener = { 
     iconUrl: "Logo64.png",
-    title: "Full Stack/Embedded Developer",
+    title: "Full Stack Developer",
     company: "Myself",
     fromYear: "2020",
     toYear: "",
@@ -70,7 +70,7 @@ const CPPCSDotNetPage = ({className, goToAngularPage, goToNodePage}) => {
 
   const deadMansSwitch = {
     iconUrl: "Logo64.png",
-    title: "Embedded Developer",
+    title: "Software/Hardware Developer",
     company: "Myself",
     fromYear: "2020",
     toYear: "",
