@@ -3,12 +3,11 @@ import React from 'react';
 
 
 const AboutPage = ({className}) => {
-  const profileImageStyle = {
-    backgroundImage: `url(https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg)`
-  }
   return (
     <div className={className} id="about-page-container">
-      <div id="about-image" style={profileImageStyle}/>
+      <div id="about-image-container">
+        <img id="about-image" alt="about-pic" src="https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg"/>
+      </div>
       <div id="about-page">
         <p id="about-intro">
           Hi, I'm Tommy, I'm a Software Engineer

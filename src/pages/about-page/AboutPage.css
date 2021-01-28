@@ -4,15 +4,23 @@
   height: 100%;
 }
 
-#about-image {
-  margin: 30px auto;
+#about-image-container {
   width: 80%;
-  padding-bottom: 80%;
+  padding-top: 80%;
   border-radius: 50%;
+  margin: 40px auto;
+  overflow: hidden;
+  position: relative;
+}
 
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
+#about-image {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  vertical-align: middle;
 }
 
 #about-page {
@@ -46,20 +54,23 @@
   box-shadow: 0 0 1px #61CA53;
 }
 #finance-js-project:hover {
-  box-shadow: 0 0 10px #61CA53;
+  box-shadow: 0 0 20px #61CA53;
 }
 
 #reservation-project {
   box-shadow: 0 0 1px #00AFF3;
 }
 #reservation-project:hover {
-  box-shadow: 0 0 10px #00AFF3;
+  box-shadow: 0 0 20px #00AFF3;
 }
 
 .about-project {
   position:relative;
   width: 80%;
   padding-bottom: 80%;
+  max-width: 450px;
+  max-height: 450px;
+  
   border-radius: 15px;
   overflow: hidden;
   margin: 40px auto;
@@ -104,8 +115,29 @@ p {
 }
 
 
-@media(min-width: 850px) {
+@media (min-width: 400px) {
   #about-page {
     font-size: 18px;
+  }
+
+  #about-image-container {
+    display: inline-block;
+    border-radius: 0;
+    width: 80%;
+    height: auto;
+    padding-top: 0;
+  }
+
+  #about-image {
+    position: static;
+    width: 100%;
+    height: 100%;
+  }
+
+  .about-project {
+    display: inline-block;
+    width: 40%;
+    padding-bottom: 40%;
+    margin: 40px 15px;
   }
 }
