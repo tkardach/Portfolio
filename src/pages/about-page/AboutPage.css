@@ -11,6 +11,11 @@
   margin: 40px auto;
   overflow: hidden;
   position: relative;
+
+  -webkit-transition: border-radius 0.5s ease-in-out;
+  -moz-transition: border-radius 0.5s ease-in-out;
+  -o-transition: border-radius 0.5s ease-in-out;
+  transition: border-radius 0.5s ease-in-out;
 }
 
 #about-image {
