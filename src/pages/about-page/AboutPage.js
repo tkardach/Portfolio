@@ -3,18 +3,29 @@ import React from 'react';
 
 
 const AboutPage = ({className}) => {
+  const profileImageStyle = {
+    backgroundImage: `url(https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg)`
+  }
   return (
-    <div className={className}>
-      <img id="about-image"  alt="test" src="https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg"/>
+    <div className={className} id="about-page-container">
+      <div id="about-image" style={profileImageStyle}/>
       <div id="about-page">
         <p id="about-intro">
-          Hi, I'm Tommy, I'm a Software Engineer based in Scotts Valley, California. 
+          Hi, I'm Tommy, I'm a Software Engineer
         </p>
         <p id="about-statement">
           I am an excellent programmer with experience developing for applications which operate complex machinery. 
           In my free time I enjoy engaging in projects that refine my skills, broaden my knowledge, and teach me 
           valuable lessons which I can take with me to the next project. 
         </p>
+      </div>
+      <div id="finance-js-project" class="about-project">
+        <img class="about-project-image bottom" alt="finance-js" src="FinanceJSPage_500.png"/>
+        <img class="about-project-image top" alt="finance-js" src="FinanceJSLogo_500.png"/>
+      </div>
+      <div id="reservation-project" class="about-project">
+        <img class="about-project-image bottom" alt="swimclub" src="ReservationPage_500.png"/>
+        <img class="about-project-image top" alt="swimclub" src="SwimClubLogo_500.png"/>
       </div>
     </div>
   );

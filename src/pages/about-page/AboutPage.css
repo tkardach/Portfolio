@@ -1,18 +1,28 @@
+#about-page-container {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+
+#about-image {
+  margin: 30px auto;
+  width: 80%;
+  padding-bottom: 80%;
+  border-radius: 50%;
+
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
 
 #about-page {
-  width: 60%;
+  width: 80%;
   display: inline-block;
   margin: 0 5%;
   color: white;
   text-align: left;
   font-size: 14px;
   overflow: hidden;
-}
-
-#about-image {
-  display: inline-block;
-  width: 500px;
-  margin: 0;
 }
 
 #about-title {
@@ -22,6 +32,7 @@
 }
 
 #about-intro {
+  text-align: center;
   font-weight: bold;
   font-size: 20px;
   margin: 15px 0;
@@ -29,6 +40,62 @@
 
 #about-statement {
   font-size: 18px;
+}
+
+#finance-js-project {
+  box-shadow: 0 0 1px #61CA53;
+}
+#finance-js-project:hover {
+  box-shadow: 0 0 10px #61CA53;
+}
+
+#reservation-project {
+  box-shadow: 0 0 1px #00AFF3;
+}
+#reservation-project:hover {
+  box-shadow: 0 0 10px #00AFF3;
+}
+
+.about-project {
+  position:relative;
+  width: 80%;
+  padding-bottom: 80%;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 40px auto;
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+.about-project-image {
+  cursor: pointer;
+  position:absolute;
+  left:0;
+  vertical-align: middle;
+  max-width: 100%;
+
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.about-project:hover {
+  transform: scale(1.05, 1.05);
+}
+
+.about-project:hover::after {
+  opacity: 1;
+}
+
+.about-project img.top:hover {
+  opacity:0;
+}
+.about-project img.top:focus {
+  opacity:0;
 }
 
 p {
