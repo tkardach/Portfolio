@@ -121,8 +121,8 @@ p {
 
 
 @media (min-width: 400px) {
-  #about-page {
-    font-size: 18px;
+  #about-intro {
+    font-size: 30px;
   }
 
   #about-image-container {
@@ -144,5 +144,15 @@ p {
     width: 40%;
     padding-bottom: 40%;
     margin: 40px 15px;
+  }
+}
+
+@media (min-width: 1000px) {
+  #about-statement {
+    font-size: 26px;
+  }
+
+  #about-page {
+    font-size: 18px;
   }
 }
