@@ -92,6 +92,8 @@
   left:0;
   vertical-align: middle;
   max-width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
 
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -101,10 +103,6 @@
 
 .about-project:hover {
   transform: scale(1.05, 1.05);
-}
-
-.about-project:hover::after {
-  opacity: 1;
 }
 
 .about-project img.top:hover {

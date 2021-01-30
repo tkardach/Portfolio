@@ -3,6 +3,14 @@ import React from 'react';
 
 
 const AboutPage = ({className}) => {
+  const openFinanceJS = () => {
+    window.open('https://tommy.kardach.com/finance-js');
+  }
+
+  const openReservations = () => {
+    window.open('https://tommy.kardach.com/reservations/make-reservations');
+  }
+
   return (
     <div className={className} id="about-page-container">
       <div id="about-image-container">
@@ -18,11 +26,11 @@ const AboutPage = ({className}) => {
           valuable lessons which I can take with me to the next project. 
         </p>
       </div>
-      <div id="finance-js-project" class="about-project">
+      <div id="finance-js-project" class="about-project" onClick={openFinanceJS}>
         <img class="about-project-image bottom" alt="finance-js" src="FinanceJSPage_500.png"/>
         <img class="about-project-image top" alt="finance-js" src="FinanceJSLogo_500.png"/>
       </div>
-      <div id="reservation-project" class="about-project">
+      <div id="reservation-project" class="about-project" onClick={openReservations}>
         <img class="about-project-image bottom" alt="swimclub" src="ReservationPage_500.png"/>
         <img class="about-project-image top" alt="swimclub" src="SwimClubLogo_500.png"/>
       </div>

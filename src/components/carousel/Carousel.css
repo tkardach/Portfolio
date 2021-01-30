@@ -60,3 +60,7 @@
   cursor: pointer;
   filter:drop-shadow(0px 0px 1px rgb(53, 53, 53));
 }
+
+button {
+  background-color: transparent;
+}

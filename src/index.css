@@ -143,10 +143,14 @@ code {
 
 .carousel-chevron {
   color: white;
+  background-color: transparent;
 }
 .carousel-chevron:hover {
   color: #545558;
 }
 .carousel-chevron:focus {
   color: #33353a;
+}
+.carousel-chevron:active {
+  background-color: transparent;
 }
