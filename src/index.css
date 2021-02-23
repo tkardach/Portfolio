@@ -24,19 +24,8 @@ code {
   margin: 15px 10%;
 }
 
-.work-experience-title {
-}
-
-.work-experience-description {
-}
-
 .generic-page {
   width: 100%;
-}
-
-.leave-transition {
-  z-index: -1;
-  transition: cardUnder 0.5s forwards;
 }
 
 .link {
@@ -45,33 +34,21 @@ code {
   text-decoration:underline;
 }
 
-@keyframes cardUnder {
-  0% {  }
-  100% { 
-    display: none;
-    overflow: hidden;
-    visibility: hidden;
-    height: 0
-  }
-}
-
 .animateTransitionLeft {
-  overflow-x: hidden;
   animation: pageTransitionLeft 0.5s;
 }
 
 @keyframes pageTransitionLeft {
-  0% { transform: translate(-100%, 0); }
+  0% { transform: translate(-100vw, 0); }
   100% { transform: translate(0, 0); }
 }
 
 .animateTransitionRight {
-  overflow-x: hidden;
   animation: pageTransitionRight 0.5s;
 }
 
 @keyframes pageTransitionRight {
-  0% { transform: translate(100%, 0); }
+  0% { transform: translate(100vw, 0); }
   100% { transform: translate(0, 0); }
 }
 
@@ -86,18 +63,15 @@ code {
 }
 
 .animateTransitionDown {
-  overflow: hidden!important;
   height: 100%;
   animation: pageTransitionDown 0.5s;
 }
 
 @keyframes pageTransitionDown {
   from { 
-    height: 200vh;
     transform: translate(0, -100vh); 
   }
   to { 
-    height: 100%; 
     transform: translate(0, 0); 
   }
 }

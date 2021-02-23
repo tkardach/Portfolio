@@ -18,6 +18,8 @@ const Carousel = ({className, vertical, children}) => {
 
     const currentPageIndex = pageIndex;
 
+    className = `${className} carousel-parent`;
+
     /**
      * Callback for kebab clicks
      * @param {int} index index of the currently selected kebab index

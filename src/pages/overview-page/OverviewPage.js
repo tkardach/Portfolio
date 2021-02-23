@@ -4,6 +4,8 @@ import Skill from '../../components/skill/Skill';
 
 
 const OverviewPage = ({className}) => {
+  className = `${className} overview-container`;
+  
   return (
     <div className={className}>
       <div id="overview">

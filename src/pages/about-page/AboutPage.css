@@ -1,8 +1,20 @@
 #about-page-container {
-  display: inline-block;
+  position: relative;
   width: 100%;
   height: 100%;
+  overflow: hidden;
 }
+
+#about-page-content {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -17px;
+  overflow-y: auto;
+}
+
 
 #about-image-container {
   width: 80%;
@@ -152,5 +164,13 @@ p {
 
   #about-page {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .about-project {
+    width: 450px;
+    height: 450px;
+    padding-bottom: 0;
   }
 }
