@@ -71,7 +71,7 @@ const Carousel = ({className, vertical, children}) => {
     const renderPage = (currentIndex) => {
         // Render the currently selected child element
         let transition = "carousel-content-child ";
-        transition += previousPageIndex !== undefined ?
+        transition += (previousPageIndex !== undefined &&  previousPageIndex !== currentIndex)?
             (newVertical ? 
                 currentIndex < previousPageIndex ? "animateTransitionDown" : "animateTransitionUp" :
                 currentIndex < previousPageIndex ? "animateTransitionLeft" : "animateTransitionRight") : "";
