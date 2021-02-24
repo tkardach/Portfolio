@@ -17,7 +17,7 @@ const NodeJSExpressPage = ({className}) => {
     skillsList: ["NodeJS", "ExpressJS", "JavaScript", "MongoDB", "TDD", "AngularJS", "HTML5", "CSS3", "TypeScript"],
     accomplishmentsList: [
       "Single handedely designed, tested and developed this web application during spare time with ThermoFisher Scientific",
-      "Integrated git commands for version comparison and JavaScript controlled repository context switching",
+      "Created JavaScript wrapper over git commands for managing source code and comparing commits between builds",
       "Wrapped existing software build CLI in JavaScript, necessary for synchronizing Node server with build script state",
       "Streamlined multiple time consuming manual tasks that increased software team efficiency and productivity"
     ]
