@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
 
 code {
@@ -22,6 +24,11 @@ code {
 .work-experience {
   text-align: left;
   margin: 15px 10%;
+}
+
+::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
 }
 
 .generic-page {
