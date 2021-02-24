@@ -13,12 +13,11 @@ const AngularPage = ({className}) => {
     fromYear: "2018",
     toYear: "Present",
     projectName: "Application Builder",
-    projectDescription: "User friendly web application so all users could easily create new application builds",
+    projectDescription: "User friendly web application which allows all users to easily create new application builds",
     skillsList: ["AngularJS", "HTML5", "CSS3", "TypeScript", "NodeJS", "ExpressJS", "JavaScript", "MongoDB"],
     accomplishmentsList: [
-      "Single handedely designed, tested and developed this web application during spare time with ThermoFisher Scientific",
-      "User interface allows users to view and download a changelog between releases in seconds, a task that took over 1 hour before",
-      "Enable developers to easily create feature branches, a task that was not feasable before due to the complexity"
+      "Single handedely designed, tested and developed web application during spare time with ThermoFisher Scientific",
+      "Created simplistic web interface which is used by all engineers on a daily basis"
     ]
   }
 
@@ -29,13 +28,13 @@ const AngularPage = ({className}) => {
     fromYear: "2020",
     toYear: "",
     projectName: "Reservation System",
-    projectDescription: "Simple calendar reservation system for managing swim club member pool times during COVID-19 government mandated safety regulations",
+    projectDescription: "Reservation system for swim club members during COVID-19 government mandated safety regulations",
     skillsList: ["AngularJS", "HTML5", "CSS3", "TypeScript", "NodeJS", "ExpressJS", "JavaScript", "Google Sheets API"],
     accomplishmentsList: [
       "Single handedely designed, tested, developed and deployed web application in 2 week time frame before pool club opening",
       "Automated time-consuming manual process of creating pool reservations which exceeded 700+ reservations per week",
       "User interface served over 40+ families with people of all ages",
-      "Address CORS issue preventing user login by hosting reservation system on parallel website under the same domain from my Raspberry Pi"
+      "Hosted server on Raspberry Pi through saratogaswimclub domain to avoid expensive cloud server costs"
     ]
   }
 
@@ -49,7 +48,7 @@ const AngularPage = ({className}) => {
     projectDescription: "Simple web application used for estimating bank account balances after recurring transactions",
     skillsList: ["AngularJS", "HTML5", "CSS3", "TypeScript", "IndexedDB"],
     accomplishmentsList: [
-      "Reduces the time I spend predicting my back account capital by 10 minutes each use",
+      "Allows users to quickly estimate expenses and balances",
       "Built using front-end storage so no private information is necessary for use"
     ]
   }
@@ -69,6 +68,15 @@ const AngularPage = ({className}) => {
               projectDescription={softwareBuilder.projectDescription}
               skillsList={softwareBuilder.skillsList}
               accomplishmentsList={softwareBuilder.accomplishmentsList}>
+            <ul className="work-experience-list">
+              <li>Eliminated multiple time consuming tasks, including:
+                <ul>
+                  <li>Comparing changes between builds for release notes</li>
+                  <li>Generating feature branches for development and engineering</li>
+                  <li>Creating and downloading builds</li>
+                </ul>
+              </li>
+            </ul>
           </Experience>
         </div>
       </div>
