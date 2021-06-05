@@ -91,7 +91,8 @@ const Home = ({className}) => {
         name: process.env.REACT_APP_PROFILE_NAME,
         linkedin: process.env.REACT_APP_LINKEDIN_URL,
         github: process.env.REACT_APP_GIT_URL,
-        email: process.env.REACT_APP_EMAIL_ADDRESS
+        email: process.env.REACT_APP_EMAIL_ADDRESS,
+        profilePicUrl: process.env.REACT_APP_PROFILE_PIC
     }
 
     // 850px matches the media query in Home.css

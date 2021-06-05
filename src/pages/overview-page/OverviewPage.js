@@ -40,7 +40,7 @@ const OverviewPage = ({className}) => {
         </div>
         <h2 id="skill-title">Other Skills</h2>
         <div id="other-skills-section">
-          <div class="box">
+          <div className="box">
             <Skill
               name="WPF"
               percentage={65}
@@ -58,7 +58,7 @@ const OverviewPage = ({className}) => {
               percentage={65}
               color={'#1B73BA'}/>
           </div>
-          <div class="box">
+          <div className="box">
             <Skill
               name=".Net"
               percentage={60}

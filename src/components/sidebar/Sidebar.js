@@ -10,7 +10,8 @@ const Sidebar = ({profile, hide, children}) => {
             name={profile.name}
             gitUrl={profile.github}
             linkedInUrl={profile.linkedin}
-            email={profile.email}></Profile>
+            email={profile.email}
+            profilePicUrl={profile.profilePicUrl}></Profile>
         </div>
         <div className="sidebar-menu">
           <React.Fragment>{children}</React.Fragment>
