@@ -31,7 +31,7 @@ const NodeJSExpressPage = ({className}) => {
     toYear: "",
     projectName: "Reservation System",
     projectDescription: "Simple calendar reservation system for managing swim club member pool times during COVID-19 government mandated safety regulations",
-    skillsList: ["NodeJS", "ExpressJS", "Google Sheets API", "AngularJS", "HTML5", "CSS3", "TypeScript"],
+    skillsList: ["NodeJS", "ExpressJS", "Google Sheets API", "AngularJS", "HTML5", "CSS3", "MongoDB", "TypeScript"],
     accomplishmentsList: [
       "Single handedely designed, tested, developed and deployed web application in 2 week time frame before pool club opening",
       "Automated time-consuming manual process of creating pool reservations which exceeded 700+ reservations per week",

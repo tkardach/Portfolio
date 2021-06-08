@@ -22,6 +22,16 @@ const Home = ({className}) => {
 
     const previousPageState = usePrevious(pageState);
 
+    
+    // Profile information
+    const profile = {
+        name: process.env.REACT_APP_PROFILE_NAME,
+        linkedin: process.env.REACT_APP_LINKEDIN_URL,
+        github: process.env.REACT_APP_GIT_URL,
+        email: process.env.REACT_APP_EMAIL_ADDRESS,
+        profilePicUrl: process.env.REACT_APP_PROFILE_PIC
+    }
+
     /**
      * Handle rendering new page according to page state
      * @param {PageState} state state of the Home component
@@ -63,7 +73,7 @@ const Home = ({className}) => {
             state === PageState.nodejs_express ? <NodeJSExpressPage key={state} className={transition}/> :
             state === PageState.angularjs ? <AngularPage key={state} className={transition}/> : 
             state === PageState.react ? <ReactPage key={state} className={transition}/> : 
-            state === PageState.about ? <AboutPage key={state} className={transition}/> : <div/>
+            state === PageState.about ? <AboutPage key={state} className={transition} aboutPicUrl={process.env.REACT_APP_ABOUT_PIC}/> : <div/>
         );
     };
 
@@ -84,15 +94,6 @@ const Home = ({className}) => {
     /** Show the sidebar */
     const showSidebar = () => {
         setHideSidebar(false);
-    }
-    
-    // Profile information
-    const profile = {
-        name: process.env.REACT_APP_PROFILE_NAME,
-        linkedin: process.env.REACT_APP_LINKEDIN_URL,
-        github: process.env.REACT_APP_GIT_URL,
-        email: process.env.REACT_APP_EMAIL_ADDRESS,
-        profilePicUrl: process.env.REACT_APP_PROFILE_PIC
     }
 
     // 850px matches the media query in Home.css

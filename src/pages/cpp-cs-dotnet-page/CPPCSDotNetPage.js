@@ -17,7 +17,7 @@ const CPPCSDotNetPage = ({className, goToAngularPage, goToNodePage}) => {
     toYear: "Present",
     projectName: "Legacy Circuit Edit Software",
     projectDescription: "Windows application used to control an advanced Focused Ion Beam used for circuit edit",
-    skillsList: ["C#", "C++", ".Net", "WinForms", "WPF", "COM", "Git", "Scrum"],
+    skillsList: ["C#", "C++", ".Net", "WinForms", "WPF", "PostgreSQL", "COM", "Git", "Scrum"],
     accomplishmentsList: [
       "Migrated codebase from 32-bit to 64-bit",
       "Moved all post-processing effects onto GPU using DirectX pixel shaders, significantly increasing processing and imaging efficiency",

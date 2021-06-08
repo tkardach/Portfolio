@@ -2,7 +2,7 @@ import './AboutPage.css';
 import React from 'react';
 
 
-const AboutPage = ({className}) => {
+const AboutPage = ({className, aboutPicUrl}) => {
   const openFinanceJS = () => {
     window.open('https://tommy.kardach.com/finance-js');
   }
@@ -10,12 +10,14 @@ const AboutPage = ({className}) => {
   const openReservations = () => {
     window.open('https://tommy.kardach.com/reservations/make-reservations');
   }
+  
+  aboutPicUrl =  aboutPicUrl ? aboutPicUrl : '#';
 
   return (
     <div className={className} id="about-page-container">
       <div id="about-page-content">
         <div id="about-image-container">
-          <img id="about-image" alt="about-pic" src="https://upload.wikimedia.org/wikipedia/en/5/5f/Original_Doge_meme.jpg"/>
+          <img id="about-image" alt="about-pic" src={aboutPicUrl}/>
         </div>
         <div id="about-page">
           <p id="about-intro">
@@ -27,13 +29,13 @@ const AboutPage = ({className}) => {
             valuable lessons which I can take with me to the next project. 
           </p>
         </div>
-        <div id="finance-js-project" class="about-project" onClick={openFinanceJS}>
-          <img class="about-project-image bottom" alt="finance-js" src="FinanceJSPage_500.png"/>
-          <img class="about-project-image top" alt="finance-js" src="FinanceJSLogo_500.png"/>
+        <div id="finance-js-project" className="about-project" onClick={openFinanceJS}>
+          <img className="about-project-image bottom" alt="finance-js" src="FinanceJSPage_500.png"/>
+          <img className="about-project-image top" alt="finance-js" src="FinanceJSLogo_500.png"/>
         </div>
-        <div id="reservation-project" class="about-project" onClick={openReservations}>
-          <img class="about-project-image bottom" alt="swimclub" src="ReservationPage_500.png"/>
-          <img class="about-project-image top" alt="swimclub" src="SwimClubLogo_500.png"/>
+        <div id="reservation-project" className="about-project" onClick={openReservations}>
+          <img className="about-project-image bottom" alt="swimclub" src="ReservationPage_500.png"/>
+          <img className="about-project-image top" alt="swimclub" src="SwimClubLogo_500.png"/>
         </div>
       </div>
     </div>
