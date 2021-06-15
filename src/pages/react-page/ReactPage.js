@@ -14,8 +14,8 @@ const ReactPage = ({className}) => {
     projectDescription: "Simplistic portfolio website used for consolidating all of my skills onto a single platform",
     skillsList: ["React", "HTML5", "CSS3", "JavaScript"],
     accomplishmentsList: [
-      "Designed and developed portfolio website",
-      "Developed over the course of a week with no prior knowledge or experience with ReactJS"
+      "Designed and developed this portfolio website",
+      "Developed first iteration over the course of a week with no prior knowledge or experience with ReactJS"
     ]
   }
   

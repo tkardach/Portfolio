@@ -16,7 +16,7 @@ const AngularPage = ({className}) => {
     projectDescription: "User friendly web application which allows all users to easily create new application builds",
     skillsList: ["AngularJS", "HTML5", "CSS3", "TypeScript", "NodeJS", "ExpressJS", "JavaScript", "MongoDB"],
     accomplishmentsList: [
-      "Single handedely designed, tested and developed web application during spare time with ThermoFisher Scientific",
+      "Single handedely designed, tested and developed software building web application during spare time with ThermoFisher Scientific",
       "Created simplistic web interface which is used by all engineers on a daily basis"
     ]
   }
@@ -48,8 +48,8 @@ const AngularPage = ({className}) => {
     projectDescription: "Simple web application used for estimating bank account balances after recurring transactions",
     skillsList: ["AngularJS", "HTML5", "CSS3", "TypeScript", "IndexedDB"],
     accomplishmentsList: [
-      "Allows users to quickly estimate expenses and balances",
-      "Built using front-end storage so no private information is necessary for use"
+      "Developed a One-Tier client application used for quickly estimating income-to-expenses ratio",
+      "Built using front-end storage so no private information is necessary for application use"
     ]
   }
 
@@ -71,9 +71,9 @@ const AngularPage = ({className}) => {
             <ul className="work-experience-list">
               <li>Eliminated multiple time consuming tasks, including:
                 <ul>
-                  <li>Comparing changes between builds for release notes</li>
-                  <li>Generating feature branches for development and engineering</li>
                   <li>Creating and downloading builds</li>
+                  <li>Comparing changes between software builds for release notes</li>
+                  <li>Generating feature branches for development and engineering use cases</li>
                 </ul>
               </li>
             </ul>

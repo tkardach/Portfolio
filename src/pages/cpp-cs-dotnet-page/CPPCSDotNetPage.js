@@ -35,7 +35,9 @@ const CPPCSDotNetPage = ({className, goToAngularPage, goToNodePage}) => {
     projectDescription: "Windows application used to control an advanced Focused Ion Beam used for circuit edit",
     skillsList: ["C#", "C++", ".Net", "WPF", "COM", "Windows Registry", "Git", "Scrum"],
     accomplishmentsList: [
-      "Fixed several complex bugs on an extremely large codebase which supports dozens of different hardware configurations",
+      "Fixed several complex bugs on an extremely large codebase (1M+ lines of code) which supports hundreds of different hardware configurations",
+      "Worked with teams across the nation and globe to implement features that span multiple projects",
+      "Developed standard PID controller with the intended purpose of maintaining gas injection pressure",
     ]
   }
 
@@ -46,11 +48,11 @@ const CPPCSDotNetPage = ({className, goToAngularPage, goToNodePage}) => {
     fromYear: "2018",
     toYear: "2019",
     projectName: "CAD Software for Electron Microscopy",
-    projectDescription: "Windows/Linux application used for navigating microscope devices using CAD interface as reference",
+    projectDescription: "Windows/Linux application used for navigating microscope devices using CAD schematic as reference",
     skillsList: ["C++", "Qt", "TCP/IP", "Git", "Scrum"],
     accomplishmentsList: [
-      "Developed mock hardware interface so software can be tested without needing physical endpoint",
-      "Created application used for translating requests from RPC to TCP/IP necessary for 64-bit to 32-bit RPC incompatibility"
+      "Developed mock hardware interface that allows software to be tested without needing physical endpoint",
+      "Created a service used for translating requests from RPC to TCP/IP necessary for microscope/CAD communication"
     ]
   }
 
@@ -62,9 +64,10 @@ const CPPCSDotNetPage = ({className, goToAngularPage, goToNodePage}) => {
     toYear: "",
     projectName: "Garage Door Opener",
     projectDescription: "Converted a standard garage door into a WiFi controllable garage door",
-    skillsList: ["C++", "AWS Lambda", "Swift", "SwiftUI", "Microcontrollers", "Circuit Design", "Particle IO"],
+    skillsList: ["C++", "AWS Lambda", "Swift", "SwiftUI", "Microcontrollers", "Particle IO"],
     accomplishmentsList: [
-      "Made standard garage door is controllable via IOS application as well as through Amazon's Alexa"
+      "Developed IOS application that controls a standard, non-WiFi enabled garage door",
+      "Included support with Amazon's Alexa for voice controllability"
     ]
   }
 
@@ -87,6 +90,17 @@ const CPPCSDotNetPage = ({className, goToAngularPage, goToNodePage}) => {
         <div>
           <h1 className="title">Work Experience</h1>
           <div className="work-experience">
+            <Experience 
+              iconUrl={newCircuitEdit.iconUrl}
+              title={newCircuitEdit.title}
+              company={newCircuitEdit.company}
+              fromYear={newCircuitEdit.fromYear}
+              toYear={newCircuitEdit.toYear}
+              projectName={newCircuitEdit.projectName}
+              projectDescription={newCircuitEdit.projectDescription}
+              skillsList={newCircuitEdit.skillsList}
+              accomplishmentsList={newCircuitEdit.accomplishmentsList}>
+            </Experience>
             <Experience
               iconUrl={legacyCircuitEdit.iconUrl}
               title={legacyCircuitEdit.title}
@@ -103,25 +117,13 @@ const CPPCSDotNetPage = ({className, goToAngularPage, goToNodePage}) => {
                   <ul>
                     <li>Adding features for drawing complex shapes</li>
                     <li>Generating matrix transformations necessary for converting between hardware and software coordinate systems</li>
-                    <li>Modifying existing pattern calculations to work with new patterns</li>
-                    <li>Altering new scan board codebase to make new scan types more consistent and efficient</li>
+                    <li>Modifying raster scans to increase scan accuracy and even scan distribution</li>
                   </ul>
                 </li>
                 <li>
                   Significantly increased team productivity, efficiency, and time by creating a software builder web interface.
                   (See <span className="link" onClick={goToAngularPageFunc}>AngularJS</span> and <span className="link" onClick={goToNodePageFunc}>NodeJS</span> sections for more information)</li>
               </ul>
-            </Experience>
-            <Experience 
-              iconUrl={newCircuitEdit.iconUrl}
-              title={newCircuitEdit.title}
-              company={newCircuitEdit.company}
-              fromYear={newCircuitEdit.fromYear}
-              toYear={newCircuitEdit.toYear}
-              projectName={newCircuitEdit.projectName}
-              projectDescription={newCircuitEdit.projectDescription}
-              skillsList={newCircuitEdit.skillsList}
-              accomplishmentsList={newCircuitEdit.accomplishmentsList}>
             </Experience>
             <Experience 
               iconUrl={cadSoftware.iconUrl}

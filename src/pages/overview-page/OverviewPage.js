@@ -65,7 +65,7 @@ const OverviewPage = ({className}) => {
               color={'#682A7B'}/>
             <Skill
               name="Algorithms"
-              percentage={75}
+              percentage={85}
               color={'#444444'}/>
             <Skill
               name="Linux OS"

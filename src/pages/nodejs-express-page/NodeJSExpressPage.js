@@ -13,13 +13,13 @@ const NodeJSExpressPage = ({className}) => {
     fromYear: "2018",
     toYear: "Present",
     projectName: "Application Builder",
-    projectDescription: "User friendly web application so all users could easily create new application builds",
+    projectDescription: "User friendly web application which manages and creates application builds",
     skillsList: ["NodeJS", "ExpressJS", "JavaScript", "MongoDB", "TDD", "AngularJS", "HTML5", "CSS3", "TypeScript"],
     accomplishmentsList: [
-      "Single handedely designed, tested and developed this web application during spare time with ThermoFisher Scientific",
-      "Created JavaScript wrapper over git commands for managing source code and comparing commits between builds",
-      "Wrapped existing software build CLI in JavaScript, necessary for synchronizing Node server with build script state",
-      "Streamlined multiple time consuming manual tasks that increased software team efficiency and productivity"
+      "Single handedely designed, tested and developed web application during spare time with ThermoFisher Scientific",
+      "Designed RESTful backend server which allowed building remotely, comparing changes between builds, and receiving server-sent events containing build progress",
+      "Created generic software design which can be used for different software projects",
+      "Streamlined multiple time-consuming manual tasks, increasing software team efficiency and productivity"
     ]
   }
 
@@ -30,13 +30,13 @@ const NodeJSExpressPage = ({className}) => {
     fromYear: "2020",
     toYear: "",
     projectName: "Reservation System",
-    projectDescription: "Simple calendar reservation system for managing swim club member pool times during COVID-19 government mandated safety regulations",
+    projectDescription: "Reservation system which manages swim club member pool times during COVID-19 government mandated safety regulations",
     skillsList: ["NodeJS", "ExpressJS", "Google Sheets API", "AngularJS", "HTML5", "CSS3", "MongoDB", "TypeScript"],
     accomplishmentsList: [
       "Single handedely designed, tested, developed and deployed web application in 2 week time frame before pool club opening",
       "Automated time-consuming manual process of creating pool reservations which exceeded 700+ reservations per week",
       "Implemented secure user login, account creation, and password recovery",
-      "Address CORS issue preventing user login by hosting reservation system on parallel website under the same domain from my Raspberry Pi"
+      "Avoided cloud server costs by hosting the reservation system on a Raspberry Pi 4, using free SSL certificates under the swim club domain"
     ]
   }
 
