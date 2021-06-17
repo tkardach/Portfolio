@@ -16,7 +16,7 @@ const NodeJSExpressPage = ({className}) => {
     projectDescription: "User friendly web application which manages and creates application builds",
     skillsList: ["NodeJS", "ExpressJS", "JavaScript", "MongoDB", "TDD", "AngularJS", "HTML5", "CSS3", "TypeScript"],
     accomplishmentsList: [
-      "Single handedely designed, tested and developed web application during spare time with ThermoFisher Scientific",
+      "Designed, tested and developed software building web application during my spare time",
       "Designed RESTful backend server which allowed building remotely, comparing changes between builds, and receiving server-sent events containing build progress",
       "Created generic software design which can be used for different software projects",
       "Streamlined multiple time-consuming manual tasks, increasing software team efficiency and productivity"
@@ -33,7 +33,7 @@ const NodeJSExpressPage = ({className}) => {
     projectDescription: "Reservation system which manages swim club member pool times during COVID-19 government mandated safety regulations",
     skillsList: ["NodeJS", "ExpressJS", "Google Sheets API", "AngularJS", "HTML5", "CSS3", "MongoDB", "TypeScript"],
     accomplishmentsList: [
-      "Single handedely designed, tested, developed and deployed web application in 2 week time frame before pool club opening",
+      "Designed, tested, developed and deployed web application in the 2 week time frame before pool club opening",
       "Automated time-consuming manual process of creating pool reservations which exceeded 700+ reservations per week",
       "Implemented secure user login, account creation, and password recovery",
       "Avoided cloud server costs by hosting the reservation system on a Raspberry Pi 4, using free SSL certificates under the swim club domain"
