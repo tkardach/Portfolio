@@ -118,7 +118,7 @@ const CPPCSDotNetPage = ({className, goToAngularPage, goToNodePage}) => {
                   <ul>
                     <li>Added features for drawing complex shapes</li>
                     <li>Generated matrix transformations necessary for converting between hardware and software coordinate systems</li>
-                    <li>Modifyed raster scans to increase scan accuracy and even scan distribution</li>
+                    <li>Modified raster scans to increase scan accuracy and even scan distribution</li>
                   </ul>
                 </li>
                 <li>
