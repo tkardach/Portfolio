@@ -16,7 +16,7 @@ const AngularPage = ({className}) => {
     projectDescription: "User friendly web application which allows all users to easily create new application builds",
     skillsList: ["AngularJS", "HTML5", "CSS3", "TypeScript", "NodeJS", "ExpressJS", "JavaScript", "MongoDB"],
     accomplishmentsList: [
-      "Single handedely designed, tested and developed software building web application during spare time with ThermoFisher Scientific",
+      "Designed, tested and developed software building web application during spare time with ThermoFisher Scientific",
       "Created simplistic web interface which is used by all engineers on a daily basis"
     ]
   }
@@ -31,7 +31,7 @@ const AngularPage = ({className}) => {
     projectDescription: "Reservation system for swim club members during COVID-19 government mandated safety regulations",
     skillsList: ["AngularJS", "HTML5", "CSS3", "TypeScript", "NodeJS", "ExpressJS", "JavaScript", "Google Sheets API"],
     accomplishmentsList: [
-      "Single handedely designed, tested, developed and deployed web application in 2 week time frame before pool club opening",
+      "Designed, tested, developed and deployed web application in 2 week time frame before pool club opening",
       "Automated time-consuming manual process of creating pool reservations which exceeded 700+ reservations per week",
       "User interface served over 40+ families with people of all ages",
       "Hosted server on Raspberry Pi through saratogaswimclub domain to avoid expensive cloud server costs"
