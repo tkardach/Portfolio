@@ -37,7 +37,7 @@ const CPPCSDotNetPage = ({className, goToAngularPage, goToNodePage}) => {
     accomplishmentsList: [
       "Fixed several complex bugs on an extremely large codebase (1M+ lines of code) which supports hundreds of different hardware configurations",
       "Worked with teams across the nation and globe to implement features that span multiple projects",
-      "Developed standard PID controller with the intended purpose of maintaining gas injection pressure",
+      "Developed standard PID controller for maintaining gas injection pressure",
     ]
   }
 
