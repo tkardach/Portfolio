@@ -5,16 +5,18 @@ import CPPCSDotNetPage from '../pages/cpp-cs-dotnet-page/CPPCSDotNetPage';
 import NodeJSExpressPage from '../pages/nodejs-express-page/NodeJSExpressPage';
 import AngularPage from '../pages/angular-page/AngularPage';
 import ReactPage from '../pages/react-page/ReactPage';
+import HTMLPage from '../pages/html-page/HTMLPage';
 import AboutPage from '../pages/about-page/AboutPage';
 import Sidebar from '../components/sidebar/Sidebar';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
-import { faAngular, faReact, faNodeJs } from '@fortawesome/free-brands-svg-icons';
+import { faAngular, faReact, faNodeJs, faHtml5, faCss3Alt } from '@fortawesome/free-brands-svg-icons';
 import { useMediaQuery } from 'react-responsive';
 import { usePrevious } from '../shared/shared';
 
 
-const PageState = Object.freeze({"overview": 0, "cpp_cs_dotnet": 1, "nodejs_express": 2, "angularjs": 3, "react": 4, "about": 5});
+// Order of PageState enum must match the order seen in the sidebar, this defines the sliding transition animation
+const PageState = Object.freeze({"overview": 0, "cpp_cs_dotnet": 1, "nodejs_express": 2, "angularjs": 3, "html" : 4, "react": 5,  "about": 6});
 
 const Home = ({className}) => {
     const [pageState, setPageState] = useState(PageState.overview);
@@ -52,7 +54,8 @@ const Home = ({className}) => {
             state === PageState.nodejs_express ? 'nodejs-button' :
             state === PageState.angularjs ? 'angular-button' : 
             state === PageState.react ? 'react-button' : 
-            state === PageState.about ? 'about-button' : 'overview-button'
+            state === PageState.about ? 'about-button' : 
+            state === PageState.html ? 'html-button' : 'overview-button'
         );
 
         // Hightlight the active button
@@ -73,6 +76,7 @@ const Home = ({className}) => {
             state === PageState.nodejs_express ? <NodeJSExpressPage key={state} className={transition}/> :
             state === PageState.angularjs ? <AngularPage key={state} className={transition}/> : 
             state === PageState.react ? <ReactPage key={state} className={transition}/> : 
+            state === PageState.html ? <HTMLPage key={state} className={transition}/> :
             state === PageState.about ? <AboutPage key={state} className={transition} aboutPicUrl={process.env.REACT_APP_ABOUT_PIC}/> : <div/>
         );
     };
@@ -124,6 +128,10 @@ const Home = ({className}) => {
                     id="angular-button"
                     className="sidebar-item"
                     onClick={() => changeState(PageState.angularjs)}><FontAwesomeIcon icon={faAngular}/> Angular</button>
+                <button 
+                    id="html-button"
+                    className="sidebar-item"
+                    onClick={() => changeState(PageState.html)}><FontAwesomeIcon icon={faHtml5}/> HTML5 + <FontAwesomeIcon icon={faCss3Alt}/> CSS3</button>
                 <button 
                     id="react-button"
                     className="sidebar-item"

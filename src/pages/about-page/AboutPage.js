@@ -11,6 +11,10 @@ const AboutPage = ({className, aboutPicUrl}) => {
     window.open('https://tommy.kardach.com/reservations/make-reservations');
   }
   
+  const openSSB = () => {
+    window.open('https://tommy.kardach.com/ssb');
+  }
+
   aboutPicUrl =  aboutPicUrl ? aboutPicUrl : '#';
 
   return (
@@ -36,6 +40,10 @@ const AboutPage = ({className, aboutPicUrl}) => {
         <div id="reservation-project" className="about-project" onClick={openReservations}>
           <img className="about-project-image bottom" alt="swimclub" src="ReservationPage_500.png"/>
           <img className="about-project-image top" alt="swimclub" src="SwimClubLogo_500.png"/>
+        </div>
+        <div id="ssb-project" className="about-project" onClick={openSSB}>
+          <img className="about-project-image bottom" alt="ssb" src="SSB_500.png"/>
+          <img className="about-project-image top" alt="ssb" src="SSB_Logo_500.png"/>
         </div>
       </div>
     </div>

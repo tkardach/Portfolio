@@ -76,6 +76,13 @@
   box-shadow: 0 0 20px #00AFF3;
 }
 
+#ssb-project {
+  box-shadow: 0 0 1px #C51E25;
+}
+#ssb-project:hover {
+  box-shadow: 0 0 20px #C51E25;
+}
+
 .about-project {
   position:relative;
   width: 80%;
