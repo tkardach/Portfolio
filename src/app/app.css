@@ -318,9 +318,14 @@
     color: #f1f5f9;
 }
 
-.skill-stars {
-    display: flex;
-    gap: 0.125rem;
+.skill-experience {
+    font-size: 0.75rem;
+    font-weight: bold;
+    color: #0ea5e9;
+    background: #1e293b;
+    padding: 0.25rem 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid #334155;
 }
 
 .star-icon {
@@ -519,6 +524,73 @@
     border-radius: 9999px;
     border: 1px solid #f1f5f9;
     white-space: nowrap;
+}
+
+.card-header-content {
+    margin-bottom: 1.25rem;
+}
+
+.card-eyebrow {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.25rem;
+}
+
+.card-company-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #2563eb;
+    text-transform: uppercase;
+}
+
+.card-date-badge {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #94a3b8;
+    background-color: #f8fafc;
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid #f1f5f9;
+}
+
+.card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #0f172a;
+    transition: color 0.2s;
+    cursor: pointer;
+}
+
+.card-title:hover {
+    color: #1d4ed8;
+}
+
+.card-meta {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #64748b;
+    font-size: 0.875rem;
+    font-weight: 500;
+    margin-top: 0.5rem;
+}
+
+.card-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+.card-meta-icon {
+    width: 1rem;
+    height: 1rem;
+    color: #94a3b8;
+}
+
+.card-meta-divider {
+    color: #cbd5e1;
 }
 
 .card-summary {
