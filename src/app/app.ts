@@ -46,8 +46,6 @@ export class App {
     { name: 'Python', experience: "Advanced" },
     { name: 'Rust', experience: "Advanced" },
     { name: 'C#', experience: "Advanced" },
-    { name: 'SQL', experience: "Advanced" },
-    { name: 'Linux Kernel', experience: "Advanced" },
   ];
 
   // --- DATA: PROJECTS ---
