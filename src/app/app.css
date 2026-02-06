@@ -724,3 +724,82 @@
     border-top: 1px solid #f1f5f9;
     /* border-slate-100 */
 }
+
+/* Responsive Styles for Mobile Devices */
+
+@media (max-width: 768px) {
+
+    /* Layout Root */
+    .layout-root {
+        flex-direction: column;
+        height: auto;
+    }
+
+    /* Sidebar */
+    .sidebar {
+        width: 100%;
+        max-width: none;
+        box-shadow: none;
+        border-bottom: 1px solid #334155;
+    }
+
+    .sidebar-profile {
+        padding: 1.5rem;
+    }
+
+    .sidebar-content {
+        padding: 1rem;
+    }
+
+    /* Main Content */
+    .main-content {
+        padding: 1rem;
+    }
+
+    .content-wrapper {
+        padding: 1rem;
+    }
+
+    /* Projects Grid */
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Modal */
+    .modal-content {
+        max-width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Buttons and Links */
+    .card-details-btn,
+    .modal-close-details-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.875rem;
+    }
+
+    /* Typography */
+    .content-title {
+        font-size: 1.5rem;
+    }
+
+    .content-subtitle {
+        font-size: 0.875rem;
+    }
+
+    .card-title {
+        font-size: 1.25rem;
+    }
+
+    .card-meta {
+        font-size: 0.75rem;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-company {
+        font-size: 0.875rem;
+    }
+}
