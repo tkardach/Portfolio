@@ -175,6 +175,32 @@ export class App {
   `,
       tags: ['HTML / CSS', 'Node.js', 'Raspberry Pi']
     },
+    {
+      id: 6,
+      title: 'Cauldron: Custom IoT Halloween Special Effects System',
+      role: 'Creator / Hobbyist Engineer',
+      company: 'Personal Project',
+      location: 'Home Lab',
+      dates: '2020 – Present',
+      summaryBullets: [
+        'Engineered "Cauldron," a low-latency IoT system using a WiFi-enabled microcontroller and a Python-based control server to synchronize audio-visual effects.',
+        'Developed a real-time signal processing engine that dynamically modulates LED brightness and patterns based on decibel levels and audio frequencies.',
+        'Implemented a UDP-based communication protocol for minimal latency between the server (Python) and the hardware (Microcontroller), ensuring frame-perfect light-to-audio sync.',
+        'Integrated a real-time voice modulation and streaming pipeline, allowing for live, low-latency audio capture and demon/witch vocal effects.'
+      ],
+      detailedDescription: `
+    <a href="https://github.com/jkardach/Cauldron" target="_blank" class="text-blue-600 hover:underline">View on GitHub</a>
+    <p>Every Halloween, I develop and iterate on "Cauldron," a custom-built IoT special effects system. The project consists of a distributed architecture where a "dumb" microcontroller acts as a high-speed peripheral receiver, while a central Python server manages the complex logic and audio-visual orchestration.</p>
+    <p class="mt-2"><strong>Key Technical Components:</strong></p>
+    <ul class="list-disc pl-5 mt-1 space-y-1">
+      <li><strong>Hardware Abstraction:</strong> Programmed a microcontroller to handle high-frequency LED strip updates over a raw UDP socket, prioritizing throughput and minimal jitter.</li>
+      <li><strong>Audio Analysis:</strong> Built a Python-based processing engine that analyzes audio decibel levels in real-time to drive reactive lighting effects, creating a seamless immersion between sound and light.</li>
+      <li><strong>Voice Stream Pipeline:</strong> Developed a voice modulation system that captures live audio, applies DSP (Digital Signal Processing) effects for vocal transformations, and streams the result to the hardware setup.</li>
+    </ul>
+    <p class="mt-4">This project allows me to experiment with real-time networking, signal processing, and rapid prototyping in a fun, high-engagement environment for my family.</p>
+  `,
+      tags: ['IoT', 'Python', 'C++']
+    },
   ];
 
   // --- COMPUTED VALUES ---
