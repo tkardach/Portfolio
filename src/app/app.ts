@@ -67,7 +67,7 @@ export class App {
     <p>I owned the end-to-end lifecycle of the Pixel Camera ISP register generation toolchain. Identifying critical scalability flaws in the legacy automation pipeline, I spearheaded a complete re-architecture of the register generation toolchain. The new system streamlined the translation of IP-XACT metadata into C++ packed structures, reducing the SOC register generation timeline from months to days.</p>
     <p class="mt-2"><strong>Key Achievements:</strong></p>
     <ul class="list-disc pl-5 mt-1 space-y-1">
-      <li><strong>Architectural Modernization:</strong> Designed a new generator that eliminated core implementation flaws in the legacy system, accelerating the delivery pipeline by over 60x and shrinking a multi-month SOC integration cycle into just a few days.</li>
+      <li><strong>Architectural Modernization:</strong> Designed a new generator that eliminated core implementation flaws in the legacy system, shrinking a multi-month register development process into just a few days.</li>
       <li><strong>Full-Stack Tooling:</strong> Developed a web-based register database using a JSONL-to-SQL pipeline, featuring an advanced search index, a register-merging tool for memory optimization, and a device register dump parser.</li>
       <li><strong>Process Automation:</strong> Created automated methods for populating register default values, saving downstream driver teams significant manual effort during initial hardware integration.</li>
       <li><strong>Project Leadership:</strong> Managed the deprecation of legacy systems while maintaining parallel support for active SOC cycles, ensuring zero downtime for dependent engineering teams.</li>
@@ -84,7 +84,7 @@ export class App {
       dates: '2021 – Present',
       summaryBullets: [
         'Optimized the Camera HAL secure pipeline, reducing the permanent secure memory heap carveout by 50% through aggressive resource management.',
-        'Reduced end-to-end Face Authentication latency by 10% by optimizing ISP hardware utilization and streamlining cross-processor communication.',
+        'Reduced end-to-end Face Authentication latency by 10% by optimizing ISP hardware utilization.',
         'Lead cross-functional bring-up of the secure camera stack for annual SOC cycles, collaborating with Face Auth, Secure Realm (TEE), and Image Quality (IQ) teams.',
         'Sustained 99.9% reliability for the device’s most frequent camera use-case by resolving complex race conditions and secure-buffer synchronization issues.'
       ],
@@ -93,7 +93,7 @@ export class App {
     <p class="mt-2"><strong>Key Achievements:</strong></p>
     <ul class="list-disc pl-5 mt-1 space-y-1">
       <li><strong>Memory Optimization:</strong> Successfully halved the secure memory heap footprint, freeing up significant SOC resources for other system-critical processes without compromising image throughput.</li>
-      <li><strong>Latency Reduction:</strong> Identified bottlenecks in the ISP-to-Secure-Realm handoff, implementing hardware-level optimizations that shaved 10% off the total authentication time.</li>
+      <li><strong>Latency Reduction:</strong> Optimized the ISP hardware pipeline by implementing a strategic early 'tap-out' mechanism, bypassing non-essential processing stages to reduce Face Authentication latency by 10% and significantly lower SOC power consumption.</li>
       <li><strong>Cross-Functional Leadership:</strong> Acted as the primary point of contact for the Secure Realm and Face Auth teams, translating high-level biometric requirements into low-level driver and HAL implementations.</li>
       <li><strong>Annual SOC Bring-up:</strong> Directed the end-to-end integration of the secure pipeline for new silicon, ensuring all security audits and performance benchmarks were met ahead of production.</li>
     </ul>
@@ -104,11 +104,11 @@ export class App {
       id: 3,
       title: 'Kernel Abstraction Layer Lead',
       role: 'Software Engineer',
-      company: 'Google (Pixel Camera)',
+      company: 'Google',
       location: 'Mountain View, CA',
-      dates: '20XX – Present',
+      dates: '2021 – Present',
       summaryBullets: [
-        'Direct the ownership and evolution of the Pixel Camera HAL’s Linux Kernel Abstraction Layer, overseeing the software-to-hardware interface for high-performance camera systems.',
+        'Serve as a team lead for the Pixel Camera HAL’s Linux Kernel Abstraction Layer, overseeing the software-to-hardware interface for high-performance camera systems.',
         'Optimized system resource utilization by 66%, consolidating 15 dedicated threads into a unified shared event system capable of multiplexing hardware interrupts.',
         'Reduced IOCTL syscall overhead by 66%–80% by architecting a logical expression interface (AND/OR) for atomic hardware trigger programming.',
         'Designed a multi-status Kernel Fence mechanism (OK/ERROR) to replace legacy binary signals, enabling robust error handling and complex transaction chaining.'
