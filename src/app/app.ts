@@ -58,7 +58,7 @@ export class App {
       location: 'Mountain View, CA',
       dates: '2021 - Present',
       summaryBullets: [
-        'Spearheaded a complete overhaul of the ISP register generation codebase, reducing SOC engineering hours from months to days via automated IP-XACT parsing.',
+        'Spearheaded a complete overhaul of the ISP register generation codebase, reducing register generation engineering hours from months to days.',
         'Orchestrated a year-long cross-functional migration roadmap, managing stakeholder expectations and ensuring 100% on-time delivery for critical SOC milestones.',
         'Engineered a full-stack register visualization and diagnostic suite, automating the identification of duplicate registers and reducing the time it takes to debug register issues from hours to minutes.',
         'Developed a high-performance C++ code generator that outputs packed memory structures and automated default-value population methods, eliminating manual programming errors and automating a process that takes months of engineering hours.'
@@ -71,6 +71,7 @@ export class App {
       <li><strong>Full-Stack Tooling:</strong> Developed a web-based register database using a JSONL-to-SQL pipeline, featuring an advanced search index, a register-merging tool for memory optimization, and a device register dump parser.</li>
       <li><strong>Process Automation:</strong> Created automated methods for populating register default values, saving downstream driver teams significant manual effort during initial hardware integration.</li>
       <li><strong>Project Leadership:</strong> Managed the deprecation of legacy systems while maintaining parallel support for active SOC cycles, ensuring zero downtime for dependent engineering teams.</li>
+      <li><strong>Federated Data Ownership:</strong> Architected a separation of concerns by shifting register transformation and naming logic to domain-specific teams. By decoupling the generation engine from domain-level metadata, I empowered domain owners to manage their own register definitions, reducing cross-team dependencies and eliminating a significant operational bottleneck for the Machine Abstraction team.</li>
     </ul>
     <p class="mt-4">This project involved deep-level hardware abstraction, complex file parsing, and extensive collaboration with camera driver programmer teams.</p>
   `,
@@ -84,9 +85,9 @@ export class App {
       dates: '2021 – Present',
       summaryBullets: [
         'Optimized the Camera HAL secure pipeline, reducing the permanent secure memory heap carveout by 50% through aggressive resource management.',
-        'Reduced end-to-end Face Authentication latency by 10% by optimizing ISP hardware utilization.',
+        'Reduced end-to-end Face Authentication latency by 10% by leveraging ISP hardware architecture.',
+        'Resolved a legacy, high-impact crash affecting 4% of the user base by identifying and fixing a deep-seated race condition in the service/client synchronization logic that had persisted since the feature\'s inception.',
         'Lead cross-functional bring-up of the secure camera stack for annual SOC cycles, collaborating with Face Auth, Secure Realm (TEE), and Image Quality (IQ) teams.',
-        'Sustained 99.9% reliability for the device’s most frequent camera use-case by resolving complex race conditions and secure-buffer synchronization issues.'
       ],
       detailedDescription: `
     <p>As the owner of the Secure Camera Pipeline, I manage the critical path between the Camera HAL and the Secure Realm (TEE). My work ensures that sensitive biometric data is processed with maximum security while maintaining the high performance required for seamless Face Authentication.</p>
@@ -108,8 +109,8 @@ export class App {
       location: 'Mountain View, CA',
       dates: '2021 – Present',
       summaryBullets: [
-        'Serve as a team lead for the Pixel Camera HAL’s Linux Kernel Abstraction Layer, overseeing the software-to-hardware interface for high-performance camera systems.',
-        'Optimized system resource utilization by 66%, consolidating 15 dedicated threads into a unified shared event system capable of multiplexing hardware interrupts.',
+        'Served as a team lead for the Pixel Camera HAL’s Linux Kernel Abstraction Layer, overseeing the software-to-hardware interface for high-performance camera systems.',
+        'Optimized system resource utilization by 66%, consolidating 15 dedicated threads into a unified shared event system capable of handling hardware interrupts for multiple devices.',
         'Reduced IOCTL syscall overhead by 66%–80% by architecting a logical expression interface (AND/OR) for atomic hardware trigger programming.',
         'Designed a multi-status Kernel Fence mechanism (OK/ERROR) to replace legacy binary signals, enabling robust error handling and complex transaction chaining.'
       ],
