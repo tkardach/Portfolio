@@ -1,5 +1,7 @@
 # Portfolio
 
+This is the latest version of the Portfolio project. This is the code used to generate my Portfolio hosted on http://tommy.kardach.com`.
+
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.1.2.
 
 ## Development server
