@@ -58,24 +58,24 @@ export class App {
       location: 'Mountain View, CA',
       dates: '2021 - Present',
       summaryBullets: [
-        'Spearheaded a complete overhaul of the ISP register generation codebase, reducing register generation engineering hours from months to days.',
+        'Co-architected a complete overhaul of the ISP register generation codebase, reducing the register delivery lifecycle from months to a few days.',
         'Orchestrated a year-long cross-functional migration roadmap, managing stakeholder expectations and ensuring 100% on-time delivery for critical SOC milestones.',
-        'Engineered a full-stack register visualization and diagnostic suite, automating the identification of duplicate registers and reducing the time it takes to debug register issues from hours to minutes.',
-        'Developed a high-performance C++ code generator that outputs packed memory structures and automated default-value population methods, eliminating manual programming errors and automating a process that takes months of engineering hours.'
+        'Single-handedly engineered a full-stack register visualization suite, reducing register debugging time from hours to minutes via automated structure identification.',
+        'Developed a high-performance C++ code generator and automated default-value population methods, eliminating manual errors and automating months of engineering effort.'
       ],
       detailedDescription: `
-    <p>I owned the end-to-end lifecycle of the Pixel Camera ISP register generation toolchain. Identifying critical scalability flaws in the legacy automation pipeline, I spearheaded a complete re-architecture of the register generation toolchain. The new system streamlined the translation of IP-XACT metadata into C++ packed structures, reducing the SOC register generation timeline from months to days.</p>
+    <p>As the Domain Expert for the Pixel Camera register generation toolchain, I co-led a two-person initiative to replace a brittle, legacy Python system with a robust, high-performance architecture written in Rust. This toolchain serves as the critical bridge between hardware definitions and the driver layer, generating the packed C++ structures required for ISP programming.</p>
     <p class="mt-2"><strong>Key Achievements:</strong></p>
     <ul class="list-disc pl-5 mt-1 space-y-1">
-      <li><strong>Architectural Modernization:</strong> Designed a new generator that eliminated core implementation flaws in the legacy system, shrinking a multi-month register development process into just a few days.</li>
-      <li><strong>Full-Stack Tooling:</strong> Developed a web-based register database using a JSONL-to-SQL pipeline, featuring an advanced search index, a register-merging tool for memory optimization, and a device register dump parser.</li>
+      <li><strong>Collaborative Modernization:</strong> Jointly designed a new generator that rectified core legacy implementation flaws, transforming a multi-month development bottleneck into a highly efficient, multi-day automated process.</li>
+      <li><strong>Full-Stack Tooling (Solo Project):</strong> Independently developed a web-based register database using a JSONL-to-SQL pipeline, featuring an advanced search index, a register-merging tool for memory optimization, and a device register dump parser.</li>
       <li><strong>Process Automation:</strong> Created automated methods for populating register default values, saving downstream driver teams significant manual effort during initial hardware integration.</li>
       <li><strong>Project Leadership:</strong> Managed the deprecation of legacy systems while maintaining parallel support for active SOC cycles, ensuring zero downtime for dependent engineering teams.</li>
-      <li><strong>Federated Data Ownership:</strong> Architected a separation of concerns by shifting register transformation and naming logic to domain-specific teams. By decoupling the generation engine from domain-level metadata, I empowered domain owners to manage their own register definitions, reducing cross-team dependencies and eliminating a significant operational bottleneck for the Machine Abstraction team.</li>
+      <li><strong>Federated Data Ownership:</strong> Architected a separation of concerns by shifting register transformation and naming logic to domain-specific teams. By decoupling the generation engine from domain-level metadata, I empowered domain owners to manage their own definitions and eliminated a major operational bottleneck.</li>
     </ul>
     <p class="mt-4">This project involved deep-level hardware abstraction, complex file parsing, and extensive collaboration with camera driver programmer teams.</p>
   `,
-      tags: ['C++', 'Rust', 'Python', 'Angular', 'Kotlin']
+      tags: ['C++', 'Rust', 'Python', 'Angular', 'Kotlin', 'Systems Architecture']
     }, {
       id: 2,
       title: 'Secure Camera Pipeline Lead',
