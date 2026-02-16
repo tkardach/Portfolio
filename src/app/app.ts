@@ -86,7 +86,7 @@ export class App {
       summaryBullets: [
         'Optimized the Camera HAL secure pipeline, reducing the permanent secure memory heap carveout by 50% through aggressive resource management.',
         'Reduced end-to-end Face Authentication latency by 10% by leveraging ISP hardware architecture.',
-        'Resolved a legacy, high-impact crash affecting 4% of the user base by identifying and fixing a deep-seated race condition in the service/client synchronization logic that had persisted since the feature\'s inception.',
+        'Resolved a legacy, high-impact crash affecting 4% of face authentication sessions by identifying and fixing a deep-seated race condition in the service/client synchronization logic that had persisted since the feature\'s inception.',
         'Lead cross-functional bring-up of the secure camera stack for annual SOC cycles, collaborating with Face Auth, Secure Realm (TEE), and Image Quality (IQ) teams.',
       ],
       detailedDescription: `
@@ -110,7 +110,7 @@ export class App {
       dates: '2021 – Present',
       summaryBullets: [
         'Served as a team lead for the Pixel Camera HAL’s Linux Kernel Abstraction Layer, overseeing the software-to-hardware interface for high-performance camera systems.',
-        'Optimized system resource utilization by 66%, consolidating 15 dedicated threads into a unified shared event system capable of handling hardware interrupts for multiple devices.',
+        'Optimized system resources by 66%, replacing 15 dedicated per-device threads with a unified 5-thread worker pool and a shared event system for multi-device hardware interrupts.',
         'Reduced IOCTL syscall overhead by 66%–80% by architecting a logical expression interface (AND/OR) for atomic hardware trigger programming.',
         'Designed a multi-status Kernel Fence mechanism (OK/ERROR) to replace legacy binary signals, enabling robust error handling and complex transaction chaining.'
       ],
@@ -119,7 +119,7 @@ export class App {
     <p class="mt-2"><strong>Key Achievements:</strong></p>
     <ul class="list-disc pl-5 mt-1 space-y-1">
       <li><strong>Thread & Resource Optimization:</strong> Re-engineered the interrupt handling architecture to use a shared event thread model. This reduction from 15 threads to 5 significantly lowered the system’s memory footprint and context-switching overhead without impacting device responsiveness.</li>
-      <li><strong>Sycall Performance:</strong> Introduced a user-friendly logical operation interface that allows developers to combine multiple hardware triggers (interrupts/fences) into a single IO transaction, cutting required IOCTL calls by up to 80% per operation.</li>
+      <li><strong>Sycall Performance:</strong> Introduced a user-friendly logical operation interface that allows developers to combine multiple hardware triggers (interrupts/fences) into a single IO transaction, cutting required IOCTL calls by up to 71% per operation.</li>
       <li><strong>Advanced Synchronization:</strong> Spearheaded the development of multi-status fences, allowing userspace drivers to receive granular feedback from the kernel and enabling the implementation of complex, asynchronous transaction chains.</li>
     </ul>
     <p class="mt-4">This role requires expertise in Linux kernel drivers, Android HAL architecture, and optimizing high-frequency asynchronous IO systems.</p>
@@ -133,8 +133,7 @@ export class App {
       company: 'Thermo Fisher Scientific',
       location: 'Fremont, CA',
       dates: '2018 – 2021', summaryBullets: [
-        'Redesigned the real-time rendering engine for Focused Ion Beam (FIB) circuitry editing, increasing visual resolution accuracy to 99.9% and doubling the frame rate.',
-        'Optimized image processing and post-processing efficiency by over 100% through a comprehensive architectural overhaul of the C++/C# visualization pipeline.',
+        'Architected the integration of a specialized C++ raster engine into a C# suite for Focused Ion Beam (FIB) editing; achieved sub-pixel accuracy and high-fidelity frame rates by optimizing coordinate conversion via linear algebra-based lookup tables and eliminating numerical precision bottlenecks in the averaging logic.',
         'Developed a full-stack CI/CD dashboard (Node.js/Angular), reducing manual build overhead by 3 hours per week and eliminating "tribal knowledge" bottlenecks.',
       ],
       detailedDescription: `
